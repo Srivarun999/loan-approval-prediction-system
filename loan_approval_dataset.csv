@@ -1,0 +1,1001 @@
+Applicant_ID,Age,Annual_Income,Credit_Score,Employment_Years,Marital_Status,Education,Loan_Amount,DTI_Ratio,Loan_Status
+LP0001,59,55045,527,34,Single,High School,201594,0.36,Rejected
+LP0002,49,112438,549,31,Single,Graduate,101881,0.44,Approved
+LP0003,35,69456,740,13,Married,High School,418757,0.23,Approved
+LP0004,63,43027,832,32,Married,Graduate,50929,0.24,Approved
+LP0005,28,79259,495,10,Single,Graduate,128199,0.57,Rejected
+LP0006,41,41638,818,23,Married,Post-Graduate,236525,0.46,Approved
+LP0007,59,21693,369,3,Married,Post-Graduate,293172,0.39,Rejected
+LP0008,39,32753,698,21,Single,Graduate,34545,0.42,Approved
+LP0009,43,23194,502,25,Divorced,Graduate,84569,0.11,Rejected
+LP0010,31,42590,447,13,Single,High School,36673,0.41,Rejected
+LP0011,31,49383,771,5,Single,Post-Graduate,429190,0.35,Approved
+LP0012,44,95853,498,26,Married,High School,457115,0.37,Approved
+LP0013,56,55869,725,38,Married,High School,421313,0.28,Approved
+LP0014,60,44907,791,18,Single,High School,369655,0.14,Approved
+LP0015,44,68306,441,0,Married,Graduate,360288,0.2,Rejected
+LP0016,23,20242,612,4,Married,High School,331968,0.58,Rejected
+LP0017,42,53865,464,24,Single,Graduate,28525,0.3,Rejected
+LP0018,22,66725,613,4,Single,High School,62804,0.33,Approved
+LP0019,44,27134,320,5,Married,Graduate,151115,0.13,Rejected
+LP0020,64,77458,381,39,Single,High School,46846,0.12,Rejected
+LP0021,50,56128,430,12,Divorced,High School,82261,0.46,Rejected
+LP0022,58,41518,604,34,Married,Post-Graduate,238312,0.37,Approved
+LP0023,22,63140,670,4,Divorced,High School,448443,0.35,Approved
+LP0024,41,121573,683,11,Single,Post-Graduate,189100,0.22,Approved
+LP0025,53,52719,744,15,Divorced,Graduate,435599,0.47,Approved
+LP0026,32,54137,724,9,Married,High School,296627,0.18,Approved
+LP0027,42,40792,460,24,Single,Post-Graduate,12265,0.19,Rejected
+LP0028,64,34893,477,19,Single,High School,289907,0.33,Rejected
+LP0029,45,68332,789,27,Single,Post-Graduate,211724,0.24,Approved
+LP0030,47,34806,626,3,Married,High School,20733,0.22,Approved
+LP0031,62,50444,588,22,Married,Post-Graduate,379340,0.42,Approved
+LP0032,48,40495,653,1,Single,High School,96038,0.43,Approved
+LP0033,36,59372,327,18,Married,Graduate,304564,0.51,Rejected
+LP0034,35,56020,342,17,Single,Graduate,145319,0.31,Rejected
+LP0035,64,74236,722,7,Married,Post-Graduate,422056,0.14,Approved
+LP0036,23,39974,476,5,Single,Post-Graduate,463365,0.24,Rejected
+LP0037,57,44004,828,13,Married,Post-Graduate,26058,0.59,Approved
+LP0038,27,33139,793,2,Married,Post-Graduate,251301,0.4,Approved
+LP0039,41,41039,497,15,Married,High School,302073,0.45,Approved
+LP0040,29,57006,816,11,Single,High School,482387,0.1,Approved
+LP0041,59,66356,813,17,Single,High School,489380,0.36,Approved
+LP0042,38,33898,321,15,Married,Graduate,167434,0.12,Rejected
+LP0043,24,69413,411,6,Single,Graduate,91489,0.38,Rejected
+LP0044,45,84309,356,27,Single,Graduate,89664,0.56,Rejected
+LP0045,34,57836,365,11,Single,High School,183428,0.58,Rejected
+LP0046,29,103851,397,10,Married,Graduate,82597,0.37,Rejected
+LP0047,46,35971,443,4,Married,High School,273185,0.33,Rejected
+LP0048,22,29796,734,4,Married,Graduate,83209,0.57,Approved
+LP0049,40,24064,385,11,Single,Graduate,263109,0.44,Rejected
+LP0050,48,89180,643,16,Single,Graduate,460170,0.13,Approved
+LP0051,27,63687,593,5,Married,Graduate,197941,0.33,Rejected
+LP0052,64,47942,542,32,Married,Graduate,157131,0.22,Approved
+LP0053,28,54829,331,4,Single,High School,104864,0.33,Rejected
+LP0054,55,31250,690,27,Married,Graduate,442938,0.33,Approved
+LP0055,34,130392,576,13,Single,High School,153620,0.39,Approved
+LP0056,37,51621,831,4,Divorced,Graduate,413294,0.28,Approved
+LP0057,56,51213,453,32,Single,Graduate,403635,0.18,Approved
+LP0058,60,65532,682,40,Divorced,High School,171562,0.35,Approved
+LP0059,24,59421,367,6,Married,High School,212158,0.52,Rejected
+LP0060,22,53613,513,4,Married,Post-Graduate,120158,0.43,Rejected
+LP0061,26,35732,675,4,Single,Post-Graduate,456976,0.27,Approved
+LP0062,62,59194,512,1,Married,Graduate,428553,0.57,Rejected
+LP0063,24,104069,378,6,Married,High School,6468,0.56,Approved
+LP0064,49,83966,680,31,Single,High School,291453,0.2,Approved
+LP0065,38,92713,357,3,Married,Graduate,464560,0.12,Rejected
+LP0066,46,39955,325,28,Divorced,Post-Graduate,488499,0.47,Rejected
+LP0067,64,32996,746,12,Married,High School,77255,0.51,Approved
+LP0068,54,46615,365,19,Married,Graduate,263078,0.58,Rejected
+LP0069,30,50125,553,6,Single,High School,349043,0.54,Rejected
+LP0070,56,75938,343,14,Married,Post-Graduate,33718,0.4,Rejected
+LP0071,34,24909,396,16,Single,Graduate,230409,0.37,Rejected
+LP0072,51,90383,526,13,Married,Graduate,244967,0.11,Approved
+LP0073,35,46018,735,17,Divorced,Graduate,173913,0.22,Approved
+LP0074,28,41326,678,10,Married,Graduate,471764,0.33,Approved
+LP0075,34,32700,477,16,Single,High School,219637,0.41,Rejected
+LP0076,43,25287,726,19,Single,High School,444876,0.38,Approved
+LP0077,60,68136,606,28,Married,Post-Graduate,373697,0.47,Rejected
+LP0078,41,50479,803,23,Married,Post-Graduate,317425,0.24,Approved
+LP0079,36,29261,567,17,Married,Post-Graduate,380595,0.38,Rejected
+LP0080,65,29201,307,9,Married,Graduate,252113,0.14,Rejected
+LP0081,38,42859,807,20,Married,Post-Graduate,267911,0.31,Approved
+LP0082,44,95569,775,7,Single,High School,402111,0.48,Approved
+LP0083,46,44186,596,25,Single,Graduate,63026,0.45,Rejected
+LP0084,45,26869,463,27,Single,Graduate,385286,0.6,Rejected
+LP0085,65,44431,784,9,Single,Graduate,47968,0.24,Approved
+LP0086,61,43954,371,16,Married,Graduate,176169,0.35,Rejected
+LP0087,49,16667,537,1,Married,High School,413548,0.26,Rejected
+LP0088,35,47967,403,5,Married,Graduate,150693,0.32,Rejected
+LP0089,65,44695,509,4,Single,Post-Graduate,81870,0.53,Rejected
+LP0090,21,64762,767,3,Single,Graduate,23174,0.44,Approved
+LP0091,45,102701,753,27,Single,High School,391501,0.54,Approved
+LP0092,27,76928,567,4,Single,High School,366333,0.2,Rejected
+LP0093,29,44021,685,11,Married,High School,45502,0.54,Rejected
+LP0094,44,31488,686,25,Single,High School,303818,0.13,Approved
+LP0095,21,137220,558,3,Married,Graduate,42260,0.54,Rejected
+LP0096,64,50195,582,40,Single,Graduate,440714,0.26,Approved
+LP0097,28,49294,339,10,Married,Graduate,203681,0.26,Rejected
+LP0098,44,48550,785,11,Married,Graduate,185536,0.36,Approved
+LP0099,31,53062,519,6,Single,Post-Graduate,76805,0.57,Rejected
+LP0100,37,46270,428,2,Married,High School,200991,0.12,Rejected
+LP0101,28,38969,819,9,Married,Graduate,264636,0.28,Approved
+LP0102,55,39389,559,33,Divorced,Post-Graduate,190541,0.53,Rejected
+LP0103,55,48382,665,24,Single,High School,22194,0.3,Approved
+LP0104,53,39443,843,34,Married,High School,162883,0.2,Approved
+LP0105,25,36859,823,7,Divorced,Post-Graduate,339521,0.31,Approved
+LP0106,62,51152,315,1,Divorced,Graduate,135864,0.29,Rejected
+LP0107,59,44267,428,23,Married,Graduate,48723,0.56,Rejected
+LP0108,61,89464,408,9,Married,High School,236408,0.48,Rejected
+LP0109,48,16976,832,30,Married,Graduate,473451,0.35,Approved
+LP0110,27,75856,568,9,Married,Graduate,247113,0.59,Rejected
+LP0111,29,80695,461,11,Married,High School,81298,0.33,Rejected
+LP0112,28,21389,559,10,Married,Graduate,64238,0.13,Rejected
+LP0113,32,42741,401,14,Married,High School,264425,0.23,Rejected
+LP0114,54,42252,805,28,Married,Graduate,110433,0.32,Approved
+LP0115,53,27917,546,35,Married,High School,112092,0.18,Rejected
+LP0116,43,35913,836,19,Single,High School,269291,0.57,Approved
+LP0117,44,31437,430,26,Married,High School,234991,0.48,Rejected
+LP0118,57,98805,652,39,Married,High School,497467,0.23,Approved
+LP0119,55,71272,495,19,Married,Post-Graduate,305589,0.4,Approved
+LP0120,64,81521,681,18,Married,High School,189875,0.46,Approved
+LP0121,60,65425,526,19,Single,Graduate,197180,0.57,Rejected
+LP0122,42,31206,775,24,Divorced,High School,111170,0.54,Approved
+LP0123,47,39743,776,1,Single,Graduate,400229,0.36,Approved
+LP0124,55,59620,564,29,Married,Post-Graduate,352761,0.49,Approved
+LP0125,21,30065,671,3,Married,High School,218482,0.38,Approved
+LP0126,55,65198,785,21,Married,Post-Graduate,320646,0.38,Approved
+LP0127,57,44527,733,2,Single,High School,122116,0.16,Approved
+LP0128,34,42195,510,5,Married,Graduate,304899,0.16,Rejected
+LP0129,23,65145,676,5,Single,Graduate,144805,0.36,Rejected
+LP0130,21,58554,694,3,Single,Post-Graduate,276623,0.23,Approved
+LP0131,25,42430,749,7,Single,Graduate,80361,0.11,Approved
+LP0132,46,77942,663,8,Single,Graduate,157376,0.46,Approved
+LP0133,34,31811,756,16,Divorced,High School,433910,0.12,Approved
+LP0134,59,62716,525,31,Divorced,High School,129232,0.4,Approved
+LP0135,47,62145,430,5,Single,Post-Graduate,372730,0.37,Rejected
+LP0136,29,43311,775,11,Married,Graduate,86171,0.58,Approved
+LP0137,35,55851,576,17,Single,Graduate,381295,0.34,Rejected
+LP0138,35,29719,455,1,Married,Graduate,91296,0.13,Rejected
+LP0139,46,70941,517,28,Married,Graduate,145562,0.38,Approved
+LP0140,62,45526,489,3,Divorced,Post-Graduate,157324,0.52,Rejected
+LP0141,33,39771,716,0,Married,Graduate,142934,0.6,Approved
+LP0142,52,74578,845,18,Married,Graduate,246535,0.32,Approved
+LP0143,59,36984,340,25,Single,Post-Graduate,337103,0.26,Rejected
+LP0144,52,27906,606,24,Divorced,High School,408666,0.55,Rejected
+LP0145,24,26300,637,6,Single,High School,323166,0.2,Rejected
+LP0146,50,62467,613,14,Married,Graduate,263970,0.41,Rejected
+LP0147,57,29372,374,21,Married,High School,329135,0.3,Rejected
+LP0148,43,98905,578,20,Married,Graduate,176999,0.12,Approved
+LP0149,59,21316,475,21,Single,Post-Graduate,236449,0.27,Rejected
+LP0150,65,96624,572,35,Divorced,Graduate,486306,0.23,Approved
+LP0151,35,53338,588,17,Single,Graduate,316997,0.44,Approved
+LP0152,63,47160,571,29,Married,Post-Graduate,36826,0.57,Approved
+LP0153,49,39420,365,24,Single,Graduate,310023,0.23,Rejected
+LP0154,56,57506,782,27,Single,Graduate,193337,0.51,Approved
+LP0155,33,48288,547,0,Married,Graduate,77361,0.13,Approved
+LP0156,52,76215,455,3,Married,Post-Graduate,245028,0.37,Rejected
+LP0157,27,51312,346,6,Single,Graduate,345134,0.14,Rejected
+LP0158,42,52058,753,8,Single,Graduate,356931,0.57,Rejected
+LP0159,48,42385,500,30,Married,Post-Graduate,222256,0.48,Rejected
+LP0160,22,47916,423,4,Married,Graduate,45736,0.43,Rejected
+LP0161,62,55443,300,0,Married,Graduate,291674,0.51,Rejected
+LP0162,65,24733,490,9,Single,Post-Graduate,214124,0.42,Rejected
+LP0163,26,28587,815,8,Single,Graduate,183130,0.58,Approved
+LP0164,48,65993,741,8,Single,Graduate,111080,0.46,Approved
+LP0165,48,52488,442,30,Single,Post-Graduate,472310,0.56,Rejected
+LP0166,64,45542,490,31,Married,Graduate,341399,0.36,Rejected
+LP0167,64,49383,832,5,Married,Graduate,140958,0.16,Approved
+LP0168,40,56332,526,22,Single,Post-Graduate,393742,0.36,Approved
+LP0169,50,39501,612,16,Single,Post-Graduate,229793,0.16,Approved
+LP0170,31,35906,601,9,Single,Graduate,123623,0.4,Approved
+LP0171,48,53015,759,26,Married,High School,304531,0.34,Approved
+LP0172,45,33145,700,27,Divorced,Graduate,157647,0.41,Approved
+LP0173,59,57716,850,20,Single,Graduate,117260,0.11,Approved
+LP0174,53,24809,692,24,Single,Graduate,437859,0.2,Approved
+LP0175,21,73988,506,3,Married,Graduate,408316,0.35,Rejected
+LP0176,47,59221,509,14,Divorced,Graduate,458572,0.58,Rejected
+LP0177,33,54307,414,3,Married,Graduate,406072,0.29,Rejected
+LP0178,61,72625,550,28,Single,High School,436385,0.31,Approved
+LP0179,23,95433,518,5,Single,Graduate,427020,0.46,Approved
+LP0180,59,73552,706,26,Married,Graduate,171862,0.4,Approved
+LP0181,26,23474,742,8,Single,High School,298132,0.25,Approved
+LP0182,28,29382,653,10,Single,High School,343592,0.31,Approved
+LP0183,47,38180,849,27,Married,Graduate,436722,0.21,Approved
+LP0184,29,49535,441,11,Single,Graduate,380574,0.58,Rejected
+LP0185,57,60298,800,39,Married,High School,223976,0.17,Approved
+LP0186,53,36669,846,19,Single,Post-Graduate,465522,0.29,Approved
+LP0187,62,52823,841,39,Single,Graduate,410521,0.11,Approved
+LP0188,64,36237,806,38,Married,Post-Graduate,146041,0.21,Approved
+LP0189,44,38383,580,22,Single,Graduate,279548,0.49,Approved
+LP0190,35,27926,723,17,Divorced,Graduate,407205,0.2,Approved
+LP0191,52,33884,569,32,Married,Post-Graduate,463521,0.14,Approved
+LP0192,52,28547,453,4,Single,Graduate,434199,0.34,Rejected
+LP0193,44,33178,382,26,Married,Graduate,246356,0.1,Approved
+LP0194,61,74716,725,39,Single,High School,175534,0.14,Approved
+LP0195,32,33531,574,10,Divorced,Graduate,286504,0.5,Approved
+LP0196,59,140498,583,2,Single,High School,352801,0.49,Approved
+LP0197,22,59714,472,4,Married,High School,424503,0.56,Rejected
+LP0198,23,52782,626,5,Single,High School,201544,0.53,Rejected
+LP0199,57,34775,362,15,Married,High School,251512,0.44,Approved
+LP0200,37,64868,372,17,Married,Post-Graduate,245037,0.13,Approved
+LP0201,22,38938,674,4,Married,High School,459529,0.49,Approved
+LP0202,22,51472,807,4,Single,Graduate,39160,0.52,Approved
+LP0203,48,136493,697,17,Single,Post-Graduate,273933,0.5,Approved
+LP0204,43,47172,419,25,Married,Graduate,163253,0.35,Rejected
+LP0205,57,77630,736,18,Divorced,High School,150457,0.22,Approved
+LP0206,52,37002,764,34,Single,Graduate,349741,0.52,Approved
+LP0207,53,48339,585,12,Married,Graduate,70641,0.46,Rejected
+LP0208,21,99540,564,2,Single,Graduate,311391,0.59,Rejected
+LP0209,39,38147,619,9,Married,Graduate,91673,0.18,Rejected
+LP0210,22,101212,675,4,Single,Post-Graduate,236322,0.21,Approved
+LP0211,64,65062,388,0,Single,Graduate,272688,0.21,Rejected
+LP0212,46,39144,502,26,Married,Graduate,251855,0.5,Rejected
+LP0213,52,63130,633,7,Single,Graduate,411491,0.19,Approved
+LP0214,26,72331,521,8,Married,High School,241361,0.13,Approved
+LP0215,52,62863,340,8,Married,Post-Graduate,68248,0.6,Rejected
+LP0216,24,26157,367,5,Single,High School,301694,0.11,Rejected
+LP0217,31,36649,813,13,Single,Graduate,320837,0.52,Approved
+LP0218,37,44399,426,19,Married,Post-Graduate,396068,0.28,Rejected
+LP0219,58,47582,554,27,Single,Graduate,417857,0.52,Rejected
+LP0220,44,62835,315,26,Married,Graduate,207821,0.38,Rejected
+LP0221,25,52632,776,7,Married,Graduate,260949,0.55,Approved
+LP0222,54,28734,361,8,Married,Post-Graduate,347165,0.56,Rejected
+LP0223,26,57072,731,8,Single,Graduate,282749,0.1,Approved
+LP0224,42,62582,567,20,Single,Post-Graduate,55713,0.14,Approved
+LP0225,31,61323,334,1,Single,High School,418606,0.23,Rejected
+LP0226,36,75532,793,18,Single,Graduate,342547,0.43,Approved
+LP0227,53,68430,768,35,Married,Post-Graduate,325610,0.54,Approved
+LP0228,29,58904,624,11,Married,High School,8981,0.33,Rejected
+LP0229,26,47664,603,8,Single,Graduate,407709,0.4,Rejected
+LP0230,36,25225,575,14,Single,High School,469434,0.19,Approved
+LP0231,49,58212,500,27,Single,Graduate,469534,0.5,Rejected
+LP0232,23,53267,744,5,Married,Graduate,382775,0.58,Approved
+LP0233,40,54646,623,22,Single,Graduate,386382,0.23,Approved
+LP0234,56,29416,334,21,Married,High School,100335,0.35,Rejected
+LP0235,39,31811,781,10,Single,High School,112441,0.14,Approved
+LP0236,46,74701,779,12,Married,High School,21984,0.38,Approved
+LP0237,23,48251,364,3,Married,Graduate,130580,0.35,Rejected
+LP0238,39,64382,307,21,Single,Graduate,378460,0.17,Rejected
+LP0239,40,49579,600,6,Single,Post-Graduate,420976,0.32,Rejected
+LP0240,52,49607,642,23,Married,Graduate,489745,0.27,Approved
+LP0241,27,71347,730,3,Single,Graduate,137596,0.36,Approved
+LP0242,61,39878,723,27,Married,Post-Graduate,123454,0.39,Approved
+LP0243,53,50942,631,14,Married,Graduate,54402,0.1,Approved
+LP0244,60,40745,737,0,Married,Post-Graduate,96656,0.48,Approved
+LP0245,59,41200,473,2,Married,Graduate,70614,0.46,Rejected
+LP0246,38,43318,826,13,Single,High School,171963,0.28,Approved
+LP0247,60,53575,325,37,Single,High School,358153,0.13,Approved
+LP0248,21,40477,705,0,Married,Graduate,438048,0.48,Approved
+LP0249,31,81007,531,13,Single,High School,312980,0.58,Approved
+LP0250,48,34274,832,30,Married,Graduate,472169,0.22,Approved
+LP0251,45,45490,849,20,Single,Graduate,411578,0.26,Approved
+LP0252,43,41114,804,25,Single,Graduate,464961,0.19,Approved
+LP0253,51,87447,478,4,Divorced,Graduate,436137,0.39,Rejected
+LP0254,50,53030,431,9,Single,High School,468650,0.18,Approved
+LP0255,62,74067,754,27,Divorced,Graduate,263789,0.28,Approved
+LP0256,55,27059,647,20,Divorced,Graduate,416778,0.45,Approved
+LP0257,27,54547,839,6,Married,Post-Graduate,462726,0.38,Approved
+LP0258,36,69972,705,2,Married,Graduate,136049,0.29,Approved
+LP0259,46,50661,375,19,Married,Post-Graduate,343551,0.31,Rejected
+LP0260,22,75071,791,4,Married,Graduate,274754,0.38,Approved
+LP0261,21,39858,493,3,Single,Graduate,114381,0.1,Rejected
+LP0262,32,86140,461,3,Married,High School,491134,0.14,Rejected
+LP0263,25,122953,646,4,Married,Graduate,20791,0.54,Approved
+LP0264,57,42398,660,0,Married,Graduate,63047,0.14,Approved
+LP0265,52,41019,386,3,Married,Graduate,499064,0.45,Rejected
+LP0266,29,87671,561,11,Single,Graduate,239898,0.56,Approved
+LP0267,61,92210,513,26,Married,Graduate,466122,0.24,Approved
+LP0268,55,39769,561,22,Married,Graduate,155737,0.29,Rejected
+LP0269,39,41436,582,21,Single,Graduate,75246,0.38,Rejected
+LP0270,36,43795,766,18,Divorced,High School,201936,0.54,Approved
+LP0271,23,28630,679,5,Married,Post-Graduate,444667,0.57,Approved
+LP0272,40,33946,661,22,Married,High School,239955,0.47,Approved
+LP0273,44,32805,748,26,Married,High School,353292,0.14,Approved
+LP0274,53,36057,740,31,Married,Graduate,50890,0.43,Approved
+LP0275,44,48345,392,4,Single,Graduate,405010,0.31,Rejected
+LP0276,31,53835,723,13,Married,Graduate,37888,0.34,Approved
+LP0277,28,91144,441,10,Single,High School,142821,0.12,Approved
+LP0278,56,32881,590,15,Married,Graduate,51531,0.2,Approved
+LP0279,58,72673,731,32,Divorced,Graduate,382796,0.5,Approved
+LP0280,60,44999,348,20,Single,Post-Graduate,287752,0.33,Rejected
+LP0281,40,48060,601,8,Single,Post-Graduate,348130,0.25,Rejected
+LP0282,55,64210,489,5,Married,Graduate,467427,0.29,Rejected
+LP0283,45,31285,435,27,Single,Graduate,351140,0.53,Rejected
+LP0284,55,57123,703,37,Married,Graduate,61017,0.47,Approved
+LP0285,45,52395,640,21,Single,High School,62676,0.24,Approved
+LP0286,49,59693,617,31,Single,Graduate,16560,0.16,Approved
+LP0287,38,55031,662,4,Divorced,Graduate,452617,0.23,Approved
+LP0288,38,130890,681,20,Married,Post-Graduate,55468,0.56,Approved
+LP0289,22,37983,532,4,Married,High School,168535,0.39,Rejected
+LP0290,55,39640,643,11,Single,Graduate,429879,0.37,Approved
+LP0291,36,38205,848,18,Married,Graduate,466922,0.4,Approved
+LP0292,61,39254,828,15,Married,Graduate,456989,0.28,Approved
+LP0293,56,37988,482,2,Married,High School,300267,0.5,Rejected
+LP0294,53,78873,340,29,Married,Post-Graduate,99346,0.36,Rejected
+LP0295,24,86526,850,6,Married,Graduate,145790,0.16,Approved
+LP0296,53,39015,696,8,Married,Graduate,198709,0.16,Approved
+LP0297,34,35138,793,16,Single,High School,267172,0.37,Approved
+LP0298,41,59193,632,23,Married,Graduate,460586,0.57,Approved
+LP0299,40,39305,426,22,Single,Graduate,52599,0.25,Rejected
+LP0300,28,63143,300,10,Married,High School,153469,0.53,Rejected
+LP0301,27,53165,467,9,Single,High School,245270,0.48,Rejected
+LP0302,23,26734,318,5,Married,Post-Graduate,50406,0.22,Rejected
+LP0303,37,91035,631,16,Married,High School,314801,0.12,Approved
+LP0304,53,100544,755,35,Single,High School,72560,0.15,Approved
+LP0305,32,38364,408,14,Single,Graduate,109143,0.46,Rejected
+LP0306,42,41978,567,1,Single,Graduate,149575,0.2,Approved
+LP0307,42,54959,744,24,Married,High School,59943,0.29,Approved
+LP0308,50,56037,539,5,Married,Graduate,80839,0.35,Approved
+LP0309,58,63794,600,17,Single,High School,87674,0.46,Rejected
+LP0310,58,109544,402,29,Married,High School,30345,0.16,Approved
+LP0311,65,45671,549,21,Single,High School,254495,0.3,Approved
+LP0312,28,35620,752,10,Married,Post-Graduate,55390,0.34,Approved
+LP0313,47,28233,819,29,Divorced,High School,231113,0.37,Approved
+LP0314,47,36593,452,16,Single,High School,326701,0.51,Rejected
+LP0315,54,48375,473,31,Married,Graduate,463270,0.19,Approved
+LP0316,41,100490,642,13,Single,Post-Graduate,6906,0.5,Approved
+LP0317,50,39853,730,9,Single,High School,438383,0.45,Approved
+LP0318,53,53611,623,35,Single,Graduate,12961,0.38,Approved
+LP0319,48,48699,719,30,Single,High School,162212,0.45,Approved
+LP0320,53,78854,784,8,Married,Graduate,386433,0.31,Approved
+LP0321,25,134695,711,7,Married,Graduate,194773,0.17,Approved
+LP0322,39,39642,383,10,Married,Graduate,344711,0.43,Rejected
+LP0323,24,40304,412,6,Single,Graduate,347808,0.36,Rejected
+LP0324,55,74433,631,37,Single,Graduate,86199,0.42,Approved
+LP0325,37,64392,677,18,Married,High School,265928,0.27,Approved
+LP0326,64,102609,340,14,Divorced,Graduate,104764,0.55,Rejected
+LP0327,48,61918,404,27,Single,High School,479434,0.39,Rejected
+LP0328,50,42458,501,23,Married,Graduate,127357,0.14,Approved
+LP0329,49,62085,749,7,Married,Post-Graduate,347873,0.32,Approved
+LP0330,26,76380,565,8,Married,Post-Graduate,426777,0.48,Approved
+LP0331,55,68063,509,32,Married,Post-Graduate,317712,0.5,Approved
+LP0332,61,60048,417,32,Single,Graduate,376493,0.35,Approved
+LP0333,57,75107,676,18,Single,Graduate,340446,0.55,Approved
+LP0334,44,78254,850,2,Married,High School,493596,0.23,Approved
+LP0335,49,85209,839,9,Single,Graduate,99968,0.31,Approved
+LP0336,51,63543,383,33,Divorced,Graduate,165576,0.55,Rejected
+LP0337,55,45851,753,0,Married,Graduate,383260,0.55,Approved
+LP0338,53,51983,813,28,Single,Graduate,304290,0.44,Approved
+LP0339,41,79427,686,23,Married,High School,45297,0.53,Approved
+LP0340,52,35356,649,12,Single,Graduate,91394,0.14,Approved
+LP0341,43,56810,595,0,Married,Post-Graduate,394317,0.53,Rejected
+LP0342,53,41884,557,33,Married,High School,393086,0.26,Rejected
+LP0343,23,49587,380,5,Divorced,Graduate,466823,0.19,Rejected
+LP0344,38,81746,567,12,Married,Post-Graduate,21939,0.22,Approved
+LP0345,45,52914,718,27,Married,Graduate,488683,0.31,Approved
+LP0346,62,49939,534,38,Married,Graduate,448931,0.23,Approved
+LP0347,51,28454,610,23,Divorced,High School,311604,0.26,Approved
+LP0348,23,66072,656,5,Single,Graduate,464792,0.17,Approved
+LP0349,60,63461,512,16,Single,Post-Graduate,204294,0.25,Rejected
+LP0350,44,116459,348,6,Single,Graduate,410882,0.39,Rejected
+LP0351,52,43342,426,12,Single,Graduate,67119,0.32,Rejected
+LP0352,42,53511,522,4,Married,High School,171393,0.27,Rejected
+LP0353,43,54163,578,25,Married,High School,399995,0.47,Rejected
+LP0354,22,92132,707,2,Married,Post-Graduate,149258,0.55,Approved
+LP0355,47,47187,804,6,Single,Graduate,414675,0.48,Approved
+LP0356,62,54808,593,38,Married,Graduate,484462,0.27,Approved
+LP0357,22,62514,576,0,Single,High School,223827,0.47,Rejected
+LP0358,46,52819,737,16,Married,Graduate,272201,0.18,Approved
+LP0359,37,41004,406,19,Married,Post-Graduate,458879,0.17,Approved
+LP0360,60,52978,719,2,Single,Graduate,154805,0.27,Approved
+LP0361,53,75316,728,14,Single,High School,286301,0.5,Approved
+LP0362,29,32512,674,11,Single,Graduate,302174,0.22,Approved
+LP0363,63,51698,372,31,Married,Graduate,155685,0.13,Rejected
+LP0364,59,37047,329,25,Divorced,Graduate,113612,0.17,Rejected
+LP0365,49,79064,487,15,Married,Post-Graduate,382224,0.53,Rejected
+LP0366,62,26654,663,24,Single,Graduate,350172,0.42,Approved
+LP0367,46,39199,750,27,Married,Post-Graduate,484498,0.23,Approved
+LP0368,55,57004,494,8,Married,Graduate,141260,0.38,Approved
+LP0369,45,91693,455,0,Married,High School,243178,0.36,Rejected
+LP0370,44,47748,471,26,Single,Graduate,264418,0.43,Rejected
+LP0371,33,39258,340,15,Single,High School,34680,0.22,Rejected
+LP0372,27,104032,362,9,Married,Post-Graduate,239433,0.53,Rejected
+LP0373,56,27468,322,38,Single,Graduate,458335,0.25,Rejected
+LP0374,65,20342,659,40,Single,Graduate,369446,0.45,Approved
+LP0375,40,58454,374,6,Single,Graduate,472616,0.11,Rejected
+LP0376,21,40101,417,3,Married,High School,453934,0.29,Rejected
+LP0377,28,32581,679,10,Married,Graduate,41445,0.28,Approved
+LP0378,36,65078,589,18,Divorced,Graduate,10796,0.37,Approved
+LP0379,34,54042,739,16,Married,High School,314362,0.14,Approved
+LP0380,32,39119,306,1,Married,Graduate,175203,0.5,Rejected
+LP0381,43,29374,495,25,Single,High School,406339,0.21,Approved
+LP0382,35,69493,720,14,Married,Graduate,144294,0.44,Approved
+LP0383,48,63581,492,2,Single,Graduate,291218,0.5,Rejected
+LP0384,54,47114,447,10,Married,High School,383232,0.38,Rejected
+LP0385,22,102606,501,4,Single,Post-Graduate,428041,0.47,Rejected
+LP0386,52,31951,743,34,Single,High School,303983,0.43,Approved
+LP0387,43,26629,718,17,Single,High School,374256,0.28,Approved
+LP0388,42,37169,726,1,Single,High School,394658,0.5,Approved
+LP0389,45,48135,778,27,Single,Graduate,73322,0.25,Approved
+LP0390,42,54032,774,7,Single,Graduate,323465,0.39,Approved
+LP0391,42,44511,425,21,Divorced,Graduate,235246,0.47,Rejected
+LP0392,62,56433,694,5,Married,High School,115100,0.29,Approved
+LP0393,26,29714,624,8,Married,High School,424204,0.25,Rejected
+LP0394,35,87334,691,17,Married,Graduate,302651,0.33,Approved
+LP0395,63,47436,739,35,Divorced,Post-Graduate,104244,0.51,Approved
+LP0396,57,76643,503,14,Married,Post-Graduate,496860,0.56,Approved
+LP0397,53,56223,785,27,Married,High School,392932,0.37,Approved
+LP0398,28,58847,330,10,Single,Graduate,362395,0.43,Rejected
+LP0399,64,61568,687,1,Single,Post-Graduate,290950,0.55,Approved
+LP0400,64,58634,733,12,Married,Graduate,135364,0.15,Approved
+LP0401,25,63391,675,7,Married,Post-Graduate,304045,0.22,Approved
+LP0402,59,83421,643,19,Married,High School,415259,0.45,Approved
+LP0403,24,53029,742,6,Single,Post-Graduate,473977,0.51,Approved
+LP0404,26,65094,374,8,Single,Graduate,407968,0.53,Rejected
+LP0405,65,47292,454,2,Married,Post-Graduate,205065,0.31,Approved
+LP0406,52,87207,729,18,Single,Graduate,178688,0.14,Approved
+LP0407,50,37400,662,2,Married,Graduate,57127,0.32,Rejected
+LP0408,55,100747,747,13,Married,Post-Graduate,472993,0.22,Approved
+LP0409,60,48239,533,39,Married,High School,267597,0.25,Approved
+LP0410,36,27658,561,3,Married,Graduate,342576,0.49,Rejected
+LP0411,33,51598,424,10,Married,Graduate,390016,0.14,Rejected
+LP0412,62,37330,544,30,Married,Graduate,92362,0.51,Rejected
+LP0413,50,68614,841,31,Married,Post-Graduate,278120,0.31,Approved
+LP0414,39,37757,784,21,Married,High School,119176,0.4,Approved
+LP0415,37,41008,421,19,Single,Graduate,104122,0.14,Approved
+LP0416,39,23021,424,1,Single,Graduate,337548,0.27,Rejected
+LP0417,48,40907,848,8,Single,High School,349076,0.14,Approved
+LP0418,46,18591,469,27,Married,Graduate,102170,0.58,Rejected
+LP0419,57,26015,423,30,Married,High School,344851,0.5,Rejected
+LP0420,46,66447,334,28,Married,Graduate,487863,0.33,Rejected
+LP0421,43,67125,386,14,Single,Post-Graduate,431904,0.21,Rejected
+LP0422,29,58115,500,11,Single,Graduate,222912,0.57,Rejected
+LP0423,32,33296,668,14,Divorced,Graduate,253178,0.27,Rejected
+LP0424,21,48094,376,3,Single,Post-Graduate,240851,0.18,Rejected
+LP0425,21,48950,358,3,Married,Graduate,360933,0.38,Rejected
+LP0426,54,30842,730,36,Married,Post-Graduate,101516,0.57,Approved
+LP0427,52,89443,799,34,Married,Graduate,400233,0.1,Approved
+LP0428,45,69629,408,27,Single,Post-Graduate,12957,0.22,Approved
+LP0429,60,44874,577,16,Single,High School,112724,0.57,Rejected
+LP0430,65,49550,367,34,Single,Post-Graduate,403008,0.19,Rejected
+LP0431,21,53281,368,3,Married,High School,454198,0.16,Rejected
+LP0432,36,21661,464,18,Married,Graduate,280381,0.39,Rejected
+LP0433,59,44405,788,28,Single,Graduate,318730,0.53,Approved
+LP0434,25,37317,604,6,Married,Graduate,480003,0.34,Approved
+LP0435,42,32838,664,24,Married,Graduate,286396,0.6,Approved
+LP0436,49,43807,678,8,Single,Graduate,408923,0.44,Rejected
+LP0437,23,100616,642,5,Married,Graduate,170278,0.14,Approved
+LP0438,32,63344,653,5,Married,High School,492492,0.6,Rejected
+LP0439,46,39008,715,28,Single,High School,8543,0.3,Approved
+LP0440,36,61637,408,16,Single,High School,180207,0.24,Rejected
+LP0441,57,85797,796,15,Married,Graduate,252541,0.38,Approved
+LP0442,42,70958,640,22,Married,High School,109647,0.25,Approved
+LP0443,49,50204,682,30,Married,Graduate,40031,0.14,Approved
+LP0444,34,37843,832,2,Married,Graduate,179001,0.1,Approved
+LP0445,48,64814,599,20,Married,High School,332891,0.32,Approved
+LP0446,25,57376,438,7,Single,Graduate,456067,0.52,Rejected
+LP0447,50,70127,658,32,Married,Post-Graduate,322455,0.39,Approved
+LP0448,25,63200,798,7,Married,High School,241403,0.6,Rejected
+LP0449,32,74594,684,14,Single,Graduate,70867,0.24,Approved
+LP0450,36,39573,579,11,Married,Graduate,93780,0.24,Approved
+LP0451,46,83030,782,12,Married,Graduate,62196,0.18,Approved
+LP0452,46,53052,410,10,Single,Graduate,78705,0.18,Rejected
+LP0453,41,112432,438,15,Divorced,Graduate,325038,0.24,Approved
+LP0454,59,37209,734,7,Single,Graduate,354784,0.5,Approved
+LP0455,56,98163,808,38,Single,High School,281735,0.55,Approved
+LP0456,53,53059,572,35,Single,Graduate,102247,0.59,Rejected
+LP0457,50,37776,398,1,Married,Graduate,184965,0.22,Rejected
+LP0458,57,40394,403,29,Married,High School,5727,0.54,Rejected
+LP0459,43,43125,513,25,Single,Graduate,419575,0.26,Approved
+LP0460,30,58085,464,11,Married,Post-Graduate,48822,0.16,Rejected
+LP0461,25,60423,819,7,Single,Graduate,499763,0.54,Approved
+LP0462,56,38968,583,10,Married,Graduate,370543,0.42,Rejected
+LP0463,54,48545,816,14,Married,Post-Graduate,117113,0.18,Approved
+LP0464,51,115486,463,15,Married,Graduate,224606,0.31,Rejected
+LP0465,30,97833,363,12,Divorced,Graduate,397575,0.24,Approved
+LP0466,39,58368,390,21,Single,Graduate,409145,0.47,Rejected
+LP0467,52,49771,416,1,Single,Post-Graduate,395732,0.33,Rejected
+LP0468,21,51431,566,3,Married,Graduate,65091,0.59,Rejected
+LP0469,25,62655,439,7,Divorced,Graduate,478594,0.13,Approved
+LP0470,65,32561,545,22,Single,Graduate,159591,0.28,Rejected
+LP0471,24,44225,694,6,Single,Post-Graduate,415609,0.34,Approved
+LP0472,36,25148,786,18,Single,Graduate,432534,0.35,Approved
+LP0473,44,57508,775,26,Married,High School,210603,0.26,Approved
+LP0474,36,63505,816,2,Single,Post-Graduate,361336,0.46,Approved
+LP0475,22,40405,483,4,Married,Graduate,184006,0.54,Rejected
+LP0476,48,92004,319,2,Divorced,High School,377949,0.57,Rejected
+LP0477,52,30022,823,29,Married,Graduate,479319,0.5,Approved
+LP0478,47,27289,828,0,Single,Graduate,164912,0.53,Approved
+LP0479,40,53625,446,22,Married,Post-Graduate,385233,0.38,Rejected
+LP0480,44,74521,603,26,Single,High School,94367,0.51,Approved
+LP0481,32,96140,527,14,Married,Post-Graduate,18265,0.25,Rejected
+LP0482,55,40800,401,20,Married,Graduate,403640,0.3,Rejected
+LP0483,53,75468,716,12,Single,High School,418841,0.26,Approved
+LP0484,53,48271,515,26,Married,Post-Graduate,84622,0.33,Rejected
+LP0485,63,45750,706,35,Married,Graduate,165259,0.24,Approved
+LP0486,57,69805,698,6,Married,High School,303073,0.58,Approved
+LP0487,32,63635,798,14,Single,Graduate,329036,0.26,Approved
+LP0488,23,26093,764,5,Married,Post-Graduate,156611,0.15,Approved
+LP0489,21,88487,381,3,Divorced,Graduate,323774,0.36,Rejected
+LP0490,53,85138,664,14,Married,High School,226711,0.13,Approved
+LP0491,60,38168,462,14,Divorced,High School,491626,0.16,Rejected
+LP0492,30,57429,347,3,Single,High School,407431,0.21,Rejected
+LP0493,63,59731,810,31,Married,Graduate,175457,0.33,Approved
+LP0494,64,54408,628,22,Married,Graduate,136025,0.32,Approved
+LP0495,49,39335,415,5,Married,High School,92580,0.5,Rejected
+LP0496,33,37472,636,15,Married,High School,344606,0.47,Approved
+LP0497,32,48522,446,14,Single,Graduate,118396,0.31,Rejected
+LP0498,51,78361,622,33,Single,Post-Graduate,364181,0.27,Approved
+LP0499,22,60927,742,4,Single,Graduate,100310,0.26,Approved
+LP0500,55,42266,312,11,Single,Post-Graduate,161080,0.49,Rejected
+LP0501,43,66747,793,25,Married,Graduate,316072,0.13,Approved
+LP0502,37,15686,586,19,Single,High School,219168,0.11,Approved
+LP0503,46,77614,413,7,Single,Post-Graduate,94876,0.5,Rejected
+LP0504,28,24443,779,0,Married,Graduate,29976,0.34,Approved
+LP0505,49,42405,321,31,Married,Graduate,250014,0.17,Rejected
+LP0506,46,31323,648,21,Married,Post-Graduate,392128,0.22,Approved
+LP0507,30,29205,619,5,Married,High School,163698,0.57,Rejected
+LP0508,46,77989,425,20,Single,High School,365400,0.53,Rejected
+LP0509,54,40656,576,31,Married,Graduate,367681,0.45,Approved
+LP0510,61,56308,503,34,Married,High School,195861,0.34,Approved
+LP0511,27,48109,493,9,Single,High School,402916,0.36,Rejected
+LP0512,24,59326,846,4,Married,High School,114331,0.59,Approved
+LP0513,65,50550,585,5,Divorced,High School,199717,0.58,Rejected
+LP0514,31,29342,356,13,Single,Graduate,256666,0.21,Rejected
+LP0515,49,73021,602,31,Single,High School,471612,0.51,Approved
+LP0516,56,40235,462,28,Single,Graduate,274670,0.2,Rejected
+LP0517,45,26301,318,6,Single,Graduate,108863,0.21,Rejected
+LP0518,41,41305,669,23,Married,Graduate,437716,0.44,Approved
+LP0519,56,89348,563,12,Married,High School,204121,0.3,Approved
+LP0520,30,68877,412,12,Single,Graduate,340510,0.57,Rejected
+LP0521,57,42639,787,17,Divorced,High School,478533,0.14,Approved
+LP0522,29,42629,626,1,Married,Graduate,457333,0.36,Approved
+LP0523,44,43102,841,7,Married,Post-Graduate,61096,0.56,Approved
+LP0524,55,112498,364,10,Married,Graduate,143982,0.55,Rejected
+LP0525,55,57112,591,32,Single,Graduate,479599,0.18,Approved
+LP0526,56,58221,324,37,Married,Graduate,338329,0.28,Rejected
+LP0527,38,74021,848,20,Married,Graduate,55248,0.41,Approved
+LP0528,59,53933,300,19,Married,Post-Graduate,210728,0.18,Rejected
+LP0529,52,44195,848,11,Married,Post-Graduate,400167,0.58,Approved
+LP0530,44,45318,440,26,Single,Graduate,463428,0.56,Rejected
+LP0531,43,47636,487,25,Divorced,Graduate,473917,0.18,Approved
+LP0532,52,48296,427,31,Single,Post-Graduate,84888,0.16,Rejected
+LP0533,57,65581,500,9,Married,Post-Graduate,211354,0.14,Rejected
+LP0534,32,50050,426,2,Divorced,Graduate,245346,0.55,Rejected
+LP0535,33,65713,556,15,Single,Graduate,99533,0.2,Approved
+LP0536,43,47463,846,25,Married,High School,46954,0.31,Approved
+LP0537,45,50587,493,27,Single,Post-Graduate,356863,0.32,Approved
+LP0538,55,22042,403,14,Married,High School,144876,0.4,Rejected
+LP0539,61,70723,834,15,Married,Graduate,228777,0.14,Approved
+LP0540,50,56308,564,12,Married,High School,267739,0.21,Rejected
+LP0541,37,73072,683,19,Divorced,High School,296736,0.57,Approved
+LP0542,40,15390,559,10,Married,Graduate,45643,0.55,Rejected
+LP0543,45,113023,713,20,Married,Post-Graduate,259793,0.49,Approved
+LP0544,42,46358,657,10,Married,High School,329809,0.11,Approved
+LP0545,33,76364,374,15,Divorced,Graduate,419039,0.26,Rejected
+LP0546,39,32339,654,21,Single,High School,273116,0.41,Approved
+LP0547,56,62636,487,21,Divorced,High School,283026,0.24,Rejected
+LP0548,32,32164,589,14,Single,Graduate,202466,0.55,Approved
+LP0549,61,38196,344,30,Married,Graduate,469271,0.42,Rejected
+LP0550,39,105409,382,13,Single,High School,159841,0.14,Approved
+LP0551,32,45420,422,14,Single,Graduate,30020,0.55,Rejected
+LP0552,29,53475,657,11,Married,High School,440964,0.58,Approved
+LP0553,27,69426,827,9,Married,Graduate,369765,0.14,Approved
+LP0554,48,59770,365,30,Single,Post-Graduate,352518,0.37,Rejected
+LP0555,34,52060,674,14,Single,Post-Graduate,49912,0.25,Approved
+LP0556,51,56725,461,33,Married,Graduate,17879,0.3,Approved
+LP0557,39,128202,679,2,Divorced,Graduate,38798,0.19,Approved
+LP0558,36,47903,657,15,Single,Post-Graduate,112791,0.39,Rejected
+LP0559,25,53126,487,4,Single,High School,488042,0.58,Rejected
+LP0560,55,74627,621,20,Married,Post-Graduate,182145,0.35,Approved
+LP0561,32,76283,749,9,Single,Post-Graduate,342935,0.14,Approved
+LP0562,45,78811,773,18,Married,High School,334127,0.41,Approved
+LP0563,41,63290,312,23,Married,High School,441221,0.27,Rejected
+LP0564,56,31032,483,3,Married,Post-Graduate,492947,0.53,Rejected
+LP0565,43,94218,410,25,Single,Graduate,138922,0.32,Approved
+LP0566,36,30991,807,18,Married,High School,164472,0.2,Approved
+LP0567,59,55329,589,1,Married,High School,279097,0.2,Approved
+LP0568,65,36253,594,9,Married,Graduate,111410,0.48,Approved
+LP0569,62,47779,750,24,Married,Graduate,130155,0.23,Approved
+LP0570,59,55910,514,19,Married,Graduate,159607,0.48,Approved
+LP0571,34,55744,326,16,Married,Post-Graduate,211608,0.2,Rejected
+LP0572,51,58033,530,22,Married,High School,473255,0.26,Approved
+LP0573,25,93478,620,7,Divorced,Graduate,257712,0.33,Approved
+LP0574,55,58771,532,10,Married,Graduate,348173,0.57,Rejected
+LP0575,43,44459,736,25,Married,Graduate,9055,0.57,Approved
+LP0576,49,72087,832,27,Single,High School,305314,0.2,Approved
+LP0577,63,78888,702,4,Married,Post-Graduate,234016,0.28,Approved
+LP0578,31,30000,352,4,Married,Post-Graduate,243657,0.17,Rejected
+LP0579,38,62252,612,20,Single,Graduate,367120,0.35,Approved
+LP0580,32,64891,580,11,Single,Graduate,295395,0.33,Approved
+LP0581,29,43519,330,3,Married,High School,402748,0.55,Rejected
+LP0582,30,84989,636,12,Married,Graduate,140996,0.57,Approved
+LP0583,64,46165,482,37,Married,Graduate,53037,0.29,Rejected
+LP0584,37,51546,322,19,Single,Graduate,476298,0.35,Rejected
+LP0585,58,45741,843,13,Married,Post-Graduate,97115,0.55,Approved
+LP0586,27,49327,745,9,Single,Graduate,469837,0.5,Approved
+LP0587,33,31618,373,15,Married,Graduate,345070,0.1,Approved
+LP0588,60,27556,309,10,Single,Graduate,477032,0.26,Rejected
+LP0589,62,92762,783,17,Single,High School,487870,0.31,Approved
+LP0590,29,34933,755,11,Single,Graduate,75400,0.21,Approved
+LP0591,47,32972,459,17,Single,Graduate,104525,0.2,Rejected
+LP0592,22,20715,313,4,Single,Graduate,368308,0.12,Rejected
+LP0593,25,37964,477,7,Single,Graduate,228457,0.42,Rejected
+LP0594,49,28875,711,20,Married,Graduate,229174,0.23,Approved
+LP0595,57,94542,352,4,Married,Graduate,146774,0.13,Rejected
+LP0596,58,73418,707,22,Single,Graduate,373876,0.22,Approved
+LP0597,39,37225,321,21,Married,Graduate,20385,0.5,Rejected
+LP0598,28,120689,329,10,Single,Post-Graduate,276480,0.53,Rejected
+LP0599,65,72598,559,40,Married,High School,332565,0.34,Approved
+LP0600,21,43047,504,3,Single,High School,429441,0.31,Rejected
+LP0601,42,18038,358,21,Single,Graduate,41021,0.59,Rejected
+LP0602,37,122562,770,18,Married,High School,401998,0.2,Approved
+LP0603,27,28118,765,0,Married,High School,487093,0.21,Approved
+LP0604,45,25383,311,6,Married,Graduate,122369,0.25,Rejected
+LP0605,65,73793,589,3,Married,Graduate,225702,0.19,Approved
+LP0606,24,130079,653,0,Divorced,Graduate,54111,0.29,Approved
+LP0607,56,85281,374,14,Single,Post-Graduate,94402,0.56,Rejected
+LP0608,26,61424,740,8,Single,Graduate,124774,0.41,Approved
+LP0609,51,62187,540,11,Single,Post-Graduate,258724,0.31,Approved
+LP0610,39,68965,453,21,Single,High School,220657,0.57,Rejected
+LP0611,64,66407,395,21,Married,Graduate,309863,0.12,Rejected
+LP0612,59,54856,593,16,Married,Post-Graduate,232600,0.21,Approved
+LP0613,47,51107,508,28,Single,Graduate,185109,0.38,Approved
+LP0614,30,47808,642,12,Divorced,Graduate,478319,0.41,Approved
+LP0615,46,36257,387,19,Married,Graduate,130695,0.12,Rejected
+LP0616,39,43814,689,21,Single,High School,139585,0.3,Approved
+LP0617,59,24904,624,14,Single,Graduate,251255,0.42,Rejected
+LP0618,23,47129,456,5,Single,Graduate,149407,0.45,Rejected
+LP0619,65,33009,436,39,Single,Post-Graduate,180212,0.42,Approved
+LP0620,33,31525,727,15,Single,High School,109126,0.26,Approved
+LP0621,48,52678,751,29,Married,Post-Graduate,216445,0.15,Approved
+LP0622,40,85545,440,22,Single,Post-Graduate,82658,0.31,Rejected
+LP0623,48,70779,382,2,Single,High School,170912,0.16,Rejected
+LP0624,28,26155,476,10,Divorced,Graduate,298151,0.57,Rejected
+LP0625,61,32996,497,25,Married,Post-Graduate,455163,0.34,Rejected
+LP0626,59,71418,720,29,Divorced,Post-Graduate,111833,0.26,Approved
+LP0627,21,33090,700,3,Single,Graduate,123637,0.48,Rejected
+LP0628,23,44808,770,5,Single,Graduate,387865,0.35,Approved
+LP0629,33,61084,517,1,Married,Graduate,98220,0.26,Approved
+LP0630,48,33278,474,30,Single,Graduate,31393,0.51,Rejected
+LP0631,45,51131,322,27,Single,High School,62480,0.53,Rejected
+LP0632,53,28749,534,1,Married,Graduate,384387,0.44,Rejected
+LP0633,58,38540,312,35,Married,High School,355434,0.12,Approved
+LP0634,26,55709,400,8,Married,High School,484551,0.38,Rejected
+LP0635,64,25920,835,10,Married,Graduate,371407,0.48,Approved
+LP0636,65,58465,822,7,Married,Graduate,145179,0.17,Approved
+LP0637,52,48637,751,34,Single,Graduate,273137,0.21,Approved
+LP0638,65,61144,730,21,Single,Graduate,494557,0.54,Approved
+LP0639,41,53614,832,19,Single,Graduate,98650,0.11,Approved
+LP0640,36,84597,592,7,Single,High School,239397,0.48,Approved
+LP0641,41,51538,400,23,Divorced,Graduate,384739,0.34,Rejected
+LP0642,31,41284,801,13,Married,Post-Graduate,57066,0.32,Approved
+LP0643,57,51478,603,25,Married,Graduate,378994,0.1,Approved
+LP0644,56,60920,839,29,Single,Graduate,310086,0.51,Approved
+LP0645,55,49988,654,16,Single,Graduate,21138,0.28,Approved
+LP0646,39,49823,602,19,Single,Post-Graduate,123558,0.37,Approved
+LP0647,40,37019,795,15,Single,High School,263480,0.44,Approved
+LP0648,38,37603,526,6,Single,Graduate,442743,0.45,Rejected
+LP0649,61,27971,535,15,Married,Graduate,276334,0.58,Rejected
+LP0650,34,98699,754,16,Married,Graduate,359403,0.37,Approved
+LP0651,35,29805,312,17,Married,High School,83422,0.3,Rejected
+LP0652,51,37154,509,23,Married,Graduate,191770,0.58,Rejected
+LP0653,21,36777,696,3,Divorced,High School,87315,0.42,Approved
+LP0654,23,70120,399,5,Single,Graduate,491926,0.25,Rejected
+LP0655,36,43565,330,18,Single,Graduate,34086,0.16,Rejected
+LP0656,43,80748,827,25,Single,High School,415538,0.52,Approved
+LP0657,31,37444,628,13,Married,Post-Graduate,130604,0.28,Approved
+LP0658,32,54808,465,14,Divorced,High School,367958,0.43,Rejected
+LP0659,30,35096,758,7,Single,Post-Graduate,124324,0.34,Approved
+LP0660,52,115619,399,14,Married,Graduate,481785,0.2,Approved
+LP0661,36,30484,472,18,Married,High School,221682,0.4,Rejected
+LP0662,28,55488,461,10,Single,High School,396065,0.13,Rejected
+LP0663,58,63165,562,19,Single,Post-Graduate,8435,0.31,Approved
+LP0664,32,57844,573,14,Married,High School,368649,0.37,Approved
+LP0665,44,45518,302,11,Divorced,High School,320475,0.32,Rejected
+LP0666,48,46540,327,16,Single,Graduate,165014,0.47,Rejected
+LP0667,28,49887,625,10,Married,Graduate,195707,0.51,Rejected
+LP0668,48,46221,448,28,Single,Graduate,427275,0.49,Rejected
+LP0669,56,72081,839,18,Married,High School,193629,0.12,Approved
+LP0670,46,118682,787,10,Married,High School,380601,0.2,Approved
+LP0671,28,39222,737,10,Married,High School,319533,0.37,Approved
+LP0672,48,28341,364,6,Married,High School,320158,0.57,Rejected
+LP0673,48,47319,655,30,Married,Graduate,431042,0.52,Approved
+LP0674,57,137569,832,19,Married,Graduate,297441,0.52,Approved
+LP0675,61,35544,551,37,Single,High School,48890,0.25,Rejected
+LP0676,56,94433,534,23,Married,Graduate,288466,0.31,Approved
+LP0677,47,95901,526,9,Single,Graduate,40739,0.34,Approved
+LP0678,37,39283,824,19,Married,Post-Graduate,407935,0.18,Approved
+LP0679,29,61549,612,11,Married,Post-Graduate,84553,0.12,Approved
+LP0680,53,94029,348,35,Married,Post-Graduate,13314,0.57,Rejected
+LP0681,40,42122,417,19,Married,High School,98831,0.22,Rejected
+LP0682,33,45187,353,2,Divorced,High School,342308,0.22,Rejected
+LP0683,48,38844,343,30,Single,Graduate,374802,0.14,Rejected
+LP0684,49,32666,352,31,Married,High School,344172,0.56,Rejected
+LP0685,33,37808,824,7,Single,Graduate,303257,0.39,Approved
+LP0686,55,30044,401,37,Single,Graduate,122174,0.43,Rejected
+LP0687,26,49693,697,8,Single,Post-Graduate,151429,0.56,Approved
+LP0688,38,36026,437,20,Divorced,Post-Graduate,234937,0.27,Rejected
+LP0689,25,53826,686,7,Married,Graduate,25365,0.41,Approved
+LP0690,45,26308,410,7,Divorced,Graduate,306173,0.12,Rejected
+LP0691,22,55957,316,4,Divorced,Graduate,268881,0.19,Rejected
+LP0692,30,68419,481,12,Single,High School,398186,0.52,Rejected
+LP0693,50,22081,835,9,Single,Graduate,210704,0.48,Rejected
+LP0694,65,56932,840,38,Married,High School,90474,0.28,Approved
+LP0695,25,80102,470,7,Married,Graduate,345362,0.29,Approved
+LP0696,53,30216,708,35,Married,Graduate,260678,0.37,Approved
+LP0697,21,95705,677,3,Single,Graduate,163571,0.1,Approved
+LP0698,38,57965,487,20,Married,Graduate,246099,0.22,Rejected
+LP0699,52,36974,529,34,Married,Graduate,246474,0.2,Approved
+LP0700,31,47939,418,13,Single,Post-Graduate,133692,0.23,Rejected
+LP0701,41,61287,455,23,Married,High School,243502,0.5,Rejected
+LP0702,46,50534,764,21,Married,Graduate,182229,0.24,Approved
+LP0703,45,60809,403,3,Married,Graduate,454463,0.2,Rejected
+LP0704,42,33918,801,24,Single,Graduate,395555,0.35,Approved
+LP0705,47,52456,474,17,Married,Post-Graduate,177106,0.53,Rejected
+LP0706,33,27847,720,15,Single,High School,5294,0.22,Approved
+LP0707,53,46887,433,23,Single,Graduate,496288,0.14,Rejected
+LP0708,54,34147,690,22,Married,Graduate,291740,0.28,Approved
+LP0709,61,36526,800,21,Married,Post-Graduate,103185,0.47,Approved
+LP0710,55,80373,332,1,Single,High School,278578,0.38,Rejected
+LP0711,21,75850,354,3,Married,Graduate,63382,0.51,Rejected
+LP0712,41,62545,818,10,Married,Graduate,305242,0.58,Approved
+LP0713,26,31668,311,8,Married,High School,9655,0.5,Rejected
+LP0714,48,43193,827,30,Married,Graduate,88029,0.4,Approved
+LP0715,37,79637,672,4,Married,Graduate,313372,0.35,Approved
+LP0716,25,51879,783,7,Married,Graduate,8771,0.12,Approved
+LP0717,51,123962,527,9,Single,Post-Graduate,341243,0.59,Approved
+LP0718,25,57372,606,7,Single,Graduate,125811,0.29,Approved
+LP0719,58,52934,756,23,Married,Graduate,455015,0.18,Approved
+LP0720,23,43319,459,5,Married,Graduate,329401,0.43,Rejected
+LP0721,43,51710,630,22,Married,High School,284702,0.24,Approved
+LP0722,57,46120,524,16,Single,High School,497684,0.39,Approved
+LP0723,57,65071,803,0,Single,Graduate,325580,0.39,Approved
+LP0724,30,71874,755,12,Married,Graduate,112779,0.32,Approved
+LP0725,30,35796,344,12,Single,High School,129891,0.52,Rejected
+LP0726,39,28782,513,21,Married,Graduate,259797,0.23,Approved
+LP0727,37,23517,358,8,Single,Graduate,490319,0.32,Rejected
+LP0728,41,60065,494,21,Married,High School,259472,0.37,Approved
+LP0729,34,31528,788,12,Divorced,Graduate,37376,0.43,Approved
+LP0730,29,20719,456,11,Single,High School,485674,0.49,Rejected
+LP0731,21,57264,525,3,Married,Post-Graduate,82924,0.3,Approved
+LP0732,65,132879,711,11,Single,Post-Graduate,34332,0.42,Approved
+LP0733,33,48901,504,15,Married,Graduate,398145,0.18,Approved
+LP0734,24,68555,378,6,Married,High School,51737,0.57,Rejected
+LP0735,21,50651,423,3,Married,Graduate,398056,0.29,Rejected
+LP0736,60,47119,770,14,Married,Post-Graduate,94031,0.46,Approved
+LP0737,52,70801,517,14,Married,Graduate,472186,0.11,Approved
+LP0738,54,43647,815,36,Single,High School,188024,0.2,Approved
+LP0739,48,54554,403,12,Single,Graduate,288135,0.34,Rejected
+LP0740,51,55752,692,16,Married,Post-Graduate,32472,0.54,Approved
+LP0741,28,37525,733,10,Married,Graduate,64946,0.36,Rejected
+LP0742,59,72898,630,8,Married,Graduate,425065,0.56,Rejected
+LP0743,46,45707,442,28,Married,Graduate,268685,0.34,Approved
+LP0744,54,36232,839,19,Married,Graduate,134237,0.35,Approved
+LP0745,23,60754,577,5,Married,High School,7765,0.16,Approved
+LP0746,32,34221,532,14,Married,Graduate,310218,0.5,Approved
+LP0747,21,49576,828,3,Divorced,High School,369939,0.22,Approved
+LP0748,64,48842,389,17,Married,Graduate,165355,0.55,Rejected
+LP0749,25,75686,791,7,Single,High School,106387,0.56,Approved
+LP0750,50,59271,498,15,Single,Graduate,256116,0.57,Rejected
+LP0751,50,48532,661,8,Single,High School,498377,0.36,Approved
+LP0752,37,67989,740,11,Single,Graduate,398985,0.44,Approved
+LP0753,43,85483,325,25,Single,Graduate,153878,0.49,Rejected
+LP0754,35,61274,324,17,Married,High School,488734,0.17,Rejected
+LP0755,57,49224,693,6,Married,High School,270116,0.4,Approved
+LP0756,41,29006,806,23,Married,High School,154328,0.12,Approved
+LP0757,34,32014,600,16,Married,Post-Graduate,371047,0.35,Approved
+LP0758,22,43386,638,4,Single,Graduate,154725,0.18,Approved
+LP0759,31,38414,566,13,Single,Graduate,108579,0.19,Approved
+LP0760,59,45488,760,3,Single,High School,484885,0.28,Approved
+LP0761,58,50144,755,24,Married,Graduate,44339,0.32,Approved
+LP0762,54,60589,659,31,Single,Post-Graduate,423973,0.41,Approved
+LP0763,58,47657,367,39,Single,Post-Graduate,370520,0.14,Rejected
+LP0764,54,59551,711,12,Married,Graduate,309543,0.35,Approved
+LP0765,38,50301,790,16,Married,High School,311157,0.19,Approved
+LP0766,50,22243,348,32,Single,High School,495821,0.39,Rejected
+LP0767,35,33666,401,5,Married,High School,412922,0.42,Rejected
+LP0768,47,46275,515,18,Married,High School,436447,0.38,Approved
+LP0769,54,30215,737,12,Married,High School,32909,0.47,Approved
+LP0770,58,62315,458,25,Divorced,High School,474847,0.27,Rejected
+LP0771,53,90427,788,13,Single,Graduate,193644,0.48,Approved
+LP0772,44,79818,541,26,Single,Post-Graduate,484095,0.32,Approved
+LP0773,35,45009,304,3,Married,Graduate,461983,0.34,Rejected
+LP0774,50,88990,660,32,Married,Post-Graduate,162541,0.42,Approved
+LP0775,62,52024,758,7,Married,Graduate,137385,0.11,Approved
+LP0776,37,42837,547,19,Married,High School,406063,0.43,Approved
+LP0777,25,38354,721,7,Married,Graduate,448438,0.41,Approved
+LP0778,49,43434,314,31,Divorced,High School,472918,0.25,Rejected
+LP0779,24,41970,421,6,Divorced,Graduate,146002,0.14,Rejected
+LP0780,30,52478,576,12,Married,Graduate,8285,0.15,Approved
+LP0781,37,52272,752,19,Single,Post-Graduate,390781,0.56,Approved
+LP0782,30,49080,689,12,Married,High School,40863,0.44,Approved
+LP0783,37,58382,593,2,Single,High School,152776,0.16,Approved
+LP0784,40,78925,745,22,Single,Post-Graduate,416921,0.28,Approved
+LP0785,44,71669,509,2,Married,High School,136627,0.4,Approved
+LP0786,25,27066,601,7,Single,Graduate,26323,0.52,Rejected
+LP0787,54,17648,522,15,Single,Graduate,338112,0.12,Approved
+LP0788,26,71234,302,8,Single,Post-Graduate,465138,0.22,Rejected
+LP0789,22,28374,817,4,Married,Post-Graduate,58915,0.54,Rejected
+LP0790,33,44805,392,15,Married,Post-Graduate,376687,0.1,Rejected
+LP0791,63,30698,819,7,Married,High School,146691,0.2,Approved
+LP0792,63,23842,727,7,Single,Post-Graduate,208462,0.58,Approved
+LP0793,31,60875,792,5,Married,Graduate,264990,0.41,Approved
+LP0794,43,66413,534,13,Married,Graduate,375644,0.23,Approved
+LP0795,36,38925,460,18,Single,High School,457490,0.13,Approved
+LP0796,51,17388,630,33,Married,Graduate,471389,0.11,Approved
+LP0797,31,39399,632,9,Single,Post-Graduate,419441,0.22,Approved
+LP0798,36,57338,349,2,Divorced,Post-Graduate,378410,0.54,Rejected
+LP0799,28,27131,822,10,Married,Graduate,293883,0.31,Approved
+LP0800,24,52751,791,6,Divorced,High School,445924,0.46,Approved
+LP0801,60,48721,571,28,Single,Graduate,133041,0.56,Approved
+LP0802,24,61803,551,4,Married,Post-Graduate,58019,0.3,Approved
+LP0803,45,51422,389,24,Married,Graduate,212226,0.2,Rejected
+LP0804,23,33215,745,5,Married,Graduate,238169,0.36,Approved
+LP0805,52,79112,631,30,Divorced,High School,12373,0.55,Approved
+LP0806,23,46008,438,5,Single,Graduate,171353,0.5,Rejected
+LP0807,47,48488,656,19,Single,Graduate,25187,0.13,Approved
+LP0808,49,33748,573,31,Married,Post-Graduate,335007,0.45,Approved
+LP0809,52,41055,318,21,Married,Graduate,102927,0.39,Rejected
+LP0810,39,34409,610,3,Married,Graduate,243185,0.55,Rejected
+LP0811,41,45744,453,12,Single,Graduate,351229,0.16,Rejected
+LP0812,25,97215,689,7,Married,High School,122996,0.37,Approved
+LP0813,38,28317,559,12,Single,Post-Graduate,44220,0.54,Rejected
+LP0814,48,25708,424,16,Married,Graduate,397647,0.31,Rejected
+LP0815,62,88297,653,35,Married,Graduate,12642,0.34,Approved
+LP0816,42,45083,572,24,Married,Graduate,84971,0.14,Approved
+LP0817,41,37510,544,0,Single,Graduate,60556,0.24,Rejected
+LP0818,26,74307,749,8,Married,Graduate,431976,0.26,Approved
+LP0819,21,38474,546,3,Single,Graduate,305336,0.57,Rejected
+LP0820,25,101763,819,7,Single,High School,402597,0.24,Approved
+LP0821,61,64290,440,23,Married,Graduate,232655,0.33,Approved
+LP0822,32,40329,661,7,Divorced,High School,417774,0.44,Approved
+LP0823,46,116183,307,26,Single,Graduate,297926,0.18,Rejected
+LP0824,54,38473,777,22,Married,High School,271926,0.34,Approved
+LP0825,34,65962,651,7,Married,Graduate,227489,0.47,Approved
+LP0826,46,55255,794,7,Married,Post-Graduate,190784,0.53,Approved
+LP0827,65,82511,726,25,Single,Post-Graduate,241836,0.41,Approved
+LP0828,47,91546,338,12,Divorced,Graduate,493161,0.43,Rejected
+LP0829,29,49652,486,11,Single,Graduate,155534,0.16,Approved
+LP0830,46,36265,392,28,Single,High School,327174,0.57,Rejected
+LP0831,42,58923,385,24,Single,Graduate,204591,0.17,Rejected
+LP0832,50,37380,343,24,Married,Post-Graduate,323555,0.49,Rejected
+LP0833,63,109683,436,15,Single,High School,191278,0.23,Approved
+LP0834,37,51772,720,1,Single,Graduate,102469,0.57,Approved
+LP0835,46,42356,373,17,Single,Post-Graduate,51950,0.46,Rejected
+LP0836,56,52779,847,16,Married,Post-Graduate,400739,0.48,Approved
+LP0837,21,28599,811,3,Married,High School,459142,0.21,Approved
+LP0838,28,33234,455,10,Single,Graduate,145749,0.32,Rejected
+LP0839,55,79234,554,12,Married,High School,211900,0.41,Approved
+LP0840,35,37693,470,17,Married,High School,151161,0.48,Rejected
+LP0841,42,32248,469,24,Married,Post-Graduate,402797,0.15,Approved
+LP0842,34,60758,621,16,Single,Post-Graduate,410123,0.58,Approved
+LP0843,46,78769,755,17,Married,Graduate,403825,0.55,Approved
+LP0844,48,65354,454,12,Divorced,High School,187225,0.24,Rejected
+LP0845,43,73014,648,20,Married,Post-Graduate,317683,0.51,Approved
+LP0846,34,36216,750,16,Single,Graduate,442359,0.36,Approved
+LP0847,44,27757,472,20,Married,Graduate,27936,0.33,Rejected
+LP0848,22,89369,309,4,Married,Graduate,317326,0.26,Rejected
+LP0849,65,43084,564,39,Married,High School,378403,0.39,Rejected
+LP0850,46,44341,737,18,Single,Graduate,235596,0.46,Approved
+LP0851,34,83389,546,14,Single,Graduate,100042,0.31,Approved
+LP0852,27,61236,845,8,Married,High School,280307,0.41,Approved
+LP0853,23,58826,798,5,Married,High School,262758,0.45,Approved
+LP0854,43,116541,428,25,Single,High School,457974,0.46,Rejected
+LP0855,63,37895,626,22,Divorced,High School,182129,0.13,Approved
+LP0856,65,71049,703,29,Single,Graduate,148609,0.53,Approved
+LP0857,38,50151,658,20,Married,Post-Graduate,27419,0.33,Approved
+LP0858,58,54580,316,8,Married,High School,440794,0.23,Rejected
+LP0859,55,90344,573,0,Married,High School,211063,0.22,Approved
+LP0860,35,60062,415,17,Divorced,Graduate,126211,0.34,Rejected
+LP0861,45,60798,390,10,Single,Post-Graduate,389906,0.54,Rejected
+LP0862,57,75282,381,33,Married,Graduate,210671,0.29,Rejected
+LP0863,48,42362,623,15,Single,Graduate,5834,0.47,Rejected
+LP0864,30,35042,413,8,Married,Graduate,299358,0.15,Rejected
+LP0865,59,32275,357,31,Married,High School,229006,0.34,Rejected
+LP0866,37,22324,453,14,Married,High School,259870,0.6,Rejected
+LP0867,59,111578,703,11,Single,Graduate,498244,0.49,Approved
+LP0868,42,31530,565,24,Married,Graduate,257358,0.21,Approved
+LP0869,46,44868,614,13,Single,Graduate,7413,0.35,Approved
+LP0870,64,43882,340,7,Single,Graduate,14505,0.22,Rejected
+LP0871,45,55434,404,7,Married,Graduate,256753,0.3,Rejected
+LP0872,37,67934,492,19,Married,High School,369946,0.49,Rejected
+LP0873,33,69160,700,11,Married,Graduate,138177,0.49,Approved
+LP0874,40,38823,577,0,Single,High School,204176,0.21,Rejected
+LP0875,45,45850,653,27,Single,High School,395447,0.56,Approved
+LP0876,24,54887,555,6,Married,Graduate,119897,0.4,Rejected
+LP0877,30,44379,398,12,Married,Post-Graduate,63408,0.29,Rejected
+LP0878,23,93240,581,5,Single,Post-Graduate,173751,0.35,Approved
+LP0879,61,59658,702,16,Married,Graduate,121908,0.4,Approved
+LP0880,65,65772,408,32,Married,High School,250993,0.38,Approved
+LP0881,38,63904,498,20,Married,High School,235168,0.34,Approved
+LP0882,56,78385,602,28,Married,Post-Graduate,84731,0.35,Approved
+LP0883,42,52701,626,20,Married,Graduate,332275,0.19,Approved
+LP0884,54,29180,453,20,Married,Graduate,331424,0.51,Rejected
+LP0885,28,57519,704,10,Married,Graduate,282906,0.37,Approved
+LP0886,60,37777,761,22,Single,Graduate,122798,0.17,Approved
+LP0887,64,39678,431,5,Married,Post-Graduate,121854,0.48,Rejected
+LP0888,39,61978,383,21,Married,High School,242902,0.57,Rejected
+LP0889,62,80443,698,37,Married,Graduate,325847,0.57,Approved
+LP0890,61,49439,408,36,Single,Post-Graduate,479650,0.28,Rejected
+LP0891,57,55466,520,7,Married,High School,68079,0.17,Approved
+LP0892,26,96846,667,8,Married,Graduate,26577,0.36,Approved
+LP0893,46,53976,446,28,Single,Graduate,268358,0.16,Approved
+LP0894,54,138783,411,10,Married,Post-Graduate,353483,0.57,Approved
+LP0895,65,61463,793,23,Married,High School,315258,0.19,Approved
+LP0896,26,24238,804,8,Single,Graduate,487450,0.23,Approved
+LP0897,57,66259,774,1,Divorced,High School,330374,0.3,Approved
+LP0898,53,57094,570,35,Married,Graduate,169052,0.29,Approved
+LP0899,42,82117,720,18,Married,High School,72194,0.5,Approved
+LP0900,41,64168,666,23,Single,High School,476022,0.33,Approved
+LP0901,26,46379,579,8,Single,Graduate,117333,0.19,Approved
+LP0902,26,30039,582,8,Divorced,Post-Graduate,42792,0.23,Approved
+LP0903,24,45088,339,5,Single,High School,50807,0.35,Rejected
+LP0904,50,34884,488,18,Married,High School,392410,0.17,Approved
+LP0905,31,38862,463,13,Single,Graduate,420517,0.41,Rejected
+LP0906,50,62033,835,27,Single,Graduate,141213,0.38,Approved
+LP0907,51,95603,835,1,Single,Post-Graduate,109292,0.46,Approved
+LP0908,44,57403,303,26,Married,High School,127984,0.57,Rejected
+LP0909,29,30383,589,11,Divorced,Graduate,18777,0.56,Rejected
+LP0910,23,58561,732,3,Single,High School,43346,0.57,Approved
+LP0911,51,79114,770,21,Single,High School,321847,0.22,Approved
+LP0912,60,38410,480,25,Single,Graduate,99977,0.17,Approved
+LP0913,57,46462,547,35,Married,Graduate,314963,0.25,Rejected
+LP0914,56,49309,578,12,Married,Graduate,426685,0.55,Rejected
+LP0915,44,35812,553,26,Married,Graduate,139917,0.59,Rejected
+LP0916,51,63532,480,16,Married,Graduate,377330,0.53,Rejected
+LP0917,26,46705,808,8,Married,Graduate,28290,0.16,Approved
+LP0918,22,57977,625,4,Single,Post-Graduate,379695,0.57,Rejected
+LP0919,40,34372,656,18,Divorced,High School,428915,0.31,Approved
+LP0920,48,41151,690,30,Single,High School,180324,0.1,Approved
+LP0921,31,65444,384,13,Single,Graduate,365826,0.32,Rejected
+LP0922,24,42229,616,6,Married,Graduate,139365,0.12,Rejected
+LP0923,35,97810,511,0,Married,High School,385161,0.37,Rejected
+LP0924,26,41778,814,8,Married,Post-Graduate,124496,0.27,Approved
+LP0925,50,53630,683,32,Married,High School,324233,0.34,Approved
+LP0926,58,71184,641,32,Married,Post-Graduate,414824,0.41,Approved
+LP0927,22,27796,337,4,Single,High School,395857,0.53,Rejected
+LP0928,35,24237,810,7,Married,Graduate,202345,0.43,Approved
+LP0929,31,26628,719,13,Married,Post-Graduate,283763,0.32,Approved
+LP0930,28,81229,468,10,Married,High School,83006,0.51,Approved
+LP0931,46,39310,642,3,Married,Post-Graduate,251471,0.55,Rejected
+LP0932,65,136390,605,37,Single,Graduate,223980,0.16,Approved
+LP0933,64,39116,841,26,Married,Post-Graduate,479869,0.37,Approved
+LP0934,25,52776,836,7,Married,Graduate,281923,0.24,Approved
+LP0935,26,90838,411,8,Single,Graduate,449256,0.12,Approved
+LP0936,46,109364,710,11,Married,High School,230902,0.43,Approved
+LP0937,24,111815,505,6,Divorced,Graduate,454541,0.53,Rejected
+LP0938,39,79486,484,21,Married,High School,288774,0.18,Approved
+LP0939,40,73837,681,13,Divorced,High School,372719,0.51,Approved
+LP0940,53,62131,795,24,Single,High School,120436,0.53,Approved
+LP0941,40,66926,678,22,Single,Graduate,148250,0.56,Approved
+LP0942,32,39321,346,2,Single,Graduate,418151,0.23,Rejected
+LP0943,21,35338,850,3,Married,High School,445474,0.55,Approved
+LP0944,46,48954,827,8,Single,High School,289928,0.26,Approved
+LP0945,34,45794,803,16,Single,Graduate,461938,0.38,Approved
+LP0946,58,40892,321,19,Divorced,High School,159099,0.13,Rejected
+LP0947,57,64767,512,39,Married,High School,494760,0.12,Approved
+LP0948,31,71834,609,9,Married,High School,456069,0.46,Approved
+LP0949,56,50785,571,18,Single,Post-Graduate,379311,0.32,Approved
+LP0950,33,88522,501,2,Single,Post-Graduate,72359,0.23,Approved
+LP0951,63,31049,331,23,Single,Graduate,208460,0.2,Rejected
+LP0952,23,45366,742,4,Married,Graduate,345752,0.43,Approved
+LP0953,53,36800,461,2,Divorced,Graduate,474885,0.1,Rejected
+LP0954,26,23234,553,8,Married,Graduate,282255,0.5,Rejected
+LP0955,30,47426,820,12,Single,Graduate,168384,0.14,Approved
+LP0956,25,46690,779,7,Married,Graduate,265393,0.2,Approved
+LP0957,43,89803,309,25,Single,High School,291305,0.29,Approved
+LP0958,30,63090,804,11,Single,High School,386064,0.34,Approved
+LP0959,64,32543,735,40,Married,Graduate,371967,0.28,Approved
+LP0960,22,102912,410,4,Married,Post-Graduate,392158,0.26,Approved
+LP0961,33,79890,452,15,Single,Graduate,135466,0.58,Approved
+LP0962,60,61872,401,22,Single,Post-Graduate,334457,0.42,Rejected
+LP0963,22,44775,490,4,Divorced,Post-Graduate,186446,0.11,Rejected
+LP0964,40,33397,380,19,Single,High School,422230,0.32,Rejected
+LP0965,21,42239,788,3,Single,Graduate,85308,0.54,Approved
+LP0966,57,75773,387,22,Single,Graduate,313533,0.25,Rejected
+LP0967,29,104175,493,3,Single,Post-Graduate,246235,0.15,Rejected
+LP0968,37,90880,403,19,Single,Post-Graduate,416377,0.48,Rejected
+LP0969,29,40314,395,0,Married,Graduate,112800,0.4,Rejected
+LP0970,31,31324,722,13,Single,High School,405706,0.39,Approved
+LP0971,35,51862,497,1,Married,Graduate,386691,0.13,Approved
+LP0972,44,24164,300,26,Married,High School,243269,0.17,Rejected
+LP0973,58,55785,706,2,Married,Graduate,29502,0.41,Approved
+LP0974,55,46210,677,20,Married,Post-Graduate,40757,0.2,Approved
+LP0975,50,40683,466,24,Married,Graduate,308255,0.35,Rejected
+LP0976,51,25903,808,19,Single,Graduate,103273,0.37,Approved
+LP0977,25,60200,612,7,Married,Graduate,481461,0.24,Approved
+LP0978,64,39613,717,20,Married,Graduate,63645,0.57,Approved
+LP0979,34,30700,776,16,Divorced,Graduate,377362,0.52,Approved
+LP0980,31,15538,372,13,Married,Graduate,326199,0.46,Rejected
+LP0981,29,48484,440,11,Divorced,Post-Graduate,124815,0.14,Rejected
+LP0982,54,99598,561,14,Married,Post-Graduate,407214,0.15,Approved
+LP0983,32,95273,639,14,Single,High School,164978,0.35,Approved
+LP0984,55,40829,607,20,Married,Post-Graduate,368170,0.18,Approved
+LP0985,55,38527,544,23,Divorced,Graduate,337336,0.59,Rejected
+LP0986,21,59130,814,3,Married,High School,186549,0.18,Approved
+LP0987,60,32880,636,5,Single,High School,172973,0.34,Approved
+LP0988,42,55310,375,22,Married,High School,227343,0.28,Rejected
+LP0989,49,66598,474,3,Single,Post-Graduate,57021,0.42,Rejected
+LP0990,28,80079,408,10,Single,Graduate,34092,0.16,Rejected
+LP0991,31,47095,482,13,Married,Graduate,399458,0.32,Rejected
+LP0992,61,45185,491,20,Single,High School,373987,0.24,Rejected
+LP0993,57,34503,364,27,Married,Graduate,137903,0.54,Rejected
+LP0994,34,35215,773,16,Single,High School,317865,0.12,Approved
+LP0995,50,44775,399,21,Married,Graduate,295655,0.56,Rejected
+LP0996,55,56780,843,37,Single,Graduate,77782,0.52,Approved
+LP0997,41,70645,427,22,Single,High School,364147,0.25,Rejected
+LP0998,57,35551,751,2,Single,Post-Graduate,416518,0.49,Rejected
+LP0999,25,89060,668,7,Single,High School,322712,0.12,Approved
+LP1000,39,43982,342,9,Single,Graduate,401448,0.58,Rejected
