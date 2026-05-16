@@ -302,55 +302,57 @@ st.markdown("""
 # ─────────────────────────────────────────────
 @st.cache_data
 def load_and_preprocess():
-    """Load CSV, preprocess, engineer features, encode, return clean df + encoders."""
-    try:
-        df = pd.read_csv("loan_approval_dataset.csv")
-    except FileNotFoundError:
-        st.error("⚠️ `loan_approval_dataset.csv` not found. Place it in the same directory as `app.py`.")
-        st.stop()
-
-    # ── STEP 1: FORCE-RENAME all 13 columns by position ──────────────────────
-    # This is the only 100% reliable approach when column names contain
-    # invisible spaces, tabs, or unicode whitespace that .strip() misses.
-    # The CSV always has exactly these 13 columns in this order.
-    EXPECTED_COLS = [
+    """
+    Load CSV bypassing the header entirely (header=None, skiprows=1),
+    then assign clean column names by position. This is the only approach
+    that survives any whitespace/tab/encoding corruption in the CSV header.
+    """
+    # ── Column names in the exact order they appear in the CSV ──
+    COL_NAMES = [
         "loan_id", "no_of_dependents", "education", "self_employed",
         "income_annum", "loan_amount", "loan_term", "cibil_score",
         "residential_assets_value", "commercial_assets_value",
         "luxury_assets_value", "bank_asset_value", "loan_status"
     ]
-    if len(df.columns) == len(EXPECTED_COLS):
-        df.columns = EXPECTED_COLS
-    else:
-        # Fallback: strip + lowercase whatever is there
-        df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
 
-    # ── STEP 2: Strip all string cell values ──────────────────────────────────
+    try:
+        # header=None  → don't treat row 0 as column names
+        # skiprows=1   → skip the actual (potentially corrupt) header row
+        # names=COL_NAMES → assign our clean names directly
+        df = pd.read_csv(
+            "loan_approval_dataset.csv",
+            header=None,
+            skiprows=1,
+            names=COL_NAMES
+        )
+    except FileNotFoundError:
+        st.error("⚠️ `loan_approval_dataset.csv` not found. Place it in the same directory as `app.py`.")
+        st.stop()
+
+    # ── Strip whitespace from all string columns ──
     for col in df.select_dtypes(include="object").columns:
         df[col] = df[col].astype(str).str.strip()
 
-    # ── STEP 3: Force numeric dtypes ──────────────────────────────────────────
+    # ── Force numeric types ──
     numeric_cols = [
         "no_of_dependents", "income_annum", "loan_amount", "loan_term",
         "cibil_score", "residential_assets_value", "commercial_assets_value",
         "luxury_assets_value", "bank_asset_value"
     ]
     for col in numeric_cols:
-        if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors="coerce")
+        df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    # ── STEP 4: Drop loan_id ──────────────────────────────────────────────────
-    if "loan_id" in df.columns:
-        df.drop(columns=["loan_id"], inplace=True)
+    # ── Drop loan_id ──
+    df.drop(columns=["loan_id"], inplace=True, errors="ignore")
 
-    # ── STEP 5: Drop nulls ────────────────────────────────────────────────────
+    # ── Drop nulls ──
     df.dropna(inplace=True)
     df.reset_index(drop=True, inplace=True)
 
-    # ── STEP 6: Feature Engineering ──────────────────────────────────────────
+    # ── Feature Engineering: loan burden ratio ──
     df["loan_income_ratio"] = df["loan_amount"] / df["income_annum"].replace(0, 1)
 
-    # ── STEP 7: Label Encoding ────────────────────────────────────────────────
+    # ── Label Encoding ──
     le_edu    = LabelEncoder()
     le_self   = LabelEncoder()
     le_status = LabelEncoder()
