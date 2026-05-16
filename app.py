@@ -306,38 +306,56 @@ def load_and_preprocess():
     try:
         df = pd.read_csv("loan_approval_dataset.csv")
     except FileNotFoundError:
-        st.error("⚠️ `loan_approval_dataset.csv` not found. Please place it in the same directory as `app.py`.")
+        st.error("⚠️ `loan_approval_dataset.csv` not found. Place it in the same directory as `app.py`.")
         st.stop()
 
-    # Strip whitespace from column names and string values
-    df.columns = df.columns.str.strip()
-    for col in df.select_dtypes(include="object").columns:
-        df[col] = df[col].str.strip()
+    # ── STEP 1: Aggressively clean column names (handles ALL whitespace variants) ──
+    df.columns = (
+        df.columns
+        .str.strip()
+        .str.replace(r"\s+", "_", regex=True)   # internal spaces → underscore
+        .str.lower()                              # normalise to lowercase
+    )
 
-    # Drop loan_id (non-predictive identifier)
+    # ── STEP 2: Strip all string cell values ──
+    for col in df.select_dtypes(include="object").columns:
+        df[col] = df[col].astype(str).str.strip()
+
+    # ── STEP 3: Convert numeric columns that may have been read as strings ──
+    numeric_cols = [
+        "no_of_dependents", "income_annum", "loan_amount", "loan_term",
+        "cibil_score", "residential_assets_value", "commercial_assets_value",
+        "luxury_assets_value", "bank_asset_value"
+    ]
+    for col in numeric_cols:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    # ── STEP 4: Drop loan_id (non-predictive identifier) ──
     if "loan_id" in df.columns:
         df.drop(columns=["loan_id"], inplace=True)
 
-    # Handle missing values
+    # ── STEP 5: Drop rows with nulls (after coercion) ──
     df.dropna(inplace=True)
+    df.reset_index(drop=True, inplace=True)
 
-    # ── Feature Engineering ──
-    # loan_income_ratio: how many times loan exceeds annual income
-    df["loan_income_ratio"] = df["loan_amount"] / (df["income_annum"] + 1)
+    # ── STEP 6: Feature Engineering ──
+    # loan_income_ratio: how many times loan amount exceeds annual income
+    df["loan_income_ratio"] = df["loan_amount"] / (df["income_annum"].replace(0, 1))
 
-    # ── Label Encoding ──
-    le_edu      = LabelEncoder()
-    le_self     = LabelEncoder()
-    le_status   = LabelEncoder()
+    # ── STEP 7: Label Encoding ──
+    le_edu    = LabelEncoder()
+    le_self   = LabelEncoder()
+    le_status = LabelEncoder()
 
-    df["education_enc"]    = le_edu.fit_transform(df["education"])
+    df["education_enc"]     = le_edu.fit_transform(df["education"])
     df["self_employed_enc"] = le_self.fit_transform(df["self_employed"])
     df["loan_status_enc"]   = le_status.fit_transform(df["loan_status"])
 
     encoders = {
-        "education": le_edu,
+        "education":     le_edu,
         "self_employed": le_self,
-        "loan_status": le_status
+        "loan_status":   le_status,
     }
 
     return df, encoders
