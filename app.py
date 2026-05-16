@@ -7,6 +7,7 @@
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -30,6 +31,9 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+if "force_sidebar_visible" not in st.session_state:
+    st.session_state.force_sidebar_visible = False
 
 # ─────────────────────────────────────────────
 # CUSTOM CSS - Modern Dark Financial Theme
@@ -259,7 +263,11 @@ st.markdown("""
         color: var(--text-primary) !important;
         font-size: 0.83rem !important;
     }
-    .stButton > button {
+    .stButton > button,
+    div.stButton button,
+    button[kind="primary"],
+    button[kind="secondary"],
+    [data-testid="stFormSubmitButton"] > button {
         background: linear-gradient(135deg, #f5c842, #f0a500) !important;
         color: #0a0e1a !important;
         font-family: 'Syne', sans-serif !important;
@@ -272,7 +280,11 @@ st.markdown("""
         letter-spacing: 0.06em !important;
         transition: all 0.2s ease !important;
     }
-    .stButton > button:hover {
+    .stButton > button:hover,
+    div.stButton button:hover,
+    button[kind="primary"]:hover,
+    button[kind="secondary"]:hover,
+    [data-testid="stFormSubmitButton"] > button:hover {
         transform: translateY(-2px) !important;
         box-shadow: 0 8px 24px rgba(245,200,66,0.35) !important;
     }
@@ -714,6 +726,71 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
+components.html("""
+<style>
+    #restore-sidebar {
+        width:100%;
+        padding:0.85rem 1rem;
+        border:none;
+        border-radius:12px;
+        background: linear-gradient(135deg, #f5c842, #f0a500);
+        color: #0a0e1a;
+        font-weight:800;
+        font-size:0.95rem;
+        cursor:pointer;
+        box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+    #restore-sidebar:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 32px rgba(0,0,0,0.2);
+    }
+    .restore-sidebar-wrap {
+        margin:1rem 0;
+        max-width:360px;
+    }
+</style>
+<div class='restore-sidebar-wrap'>
+    <button id='restore-sidebar'>Open sidebar</button>
+</div>
+<script>
+(function() {
+    const parentDoc = window.parent.document;
+    const expandSidebar = () => {
+        const selectors = [
+            '[data-testid="collapsedSidebar"] button',
+            'button[aria-label="Expand sidebar"]',
+            'button[title*="Expand"]',
+            'button[data-testid="collapsedSidebarButton"]',
+            '[data-testid="stSidebar"] button'
+        ];
+        for (const sel of selectors) {
+            const btn = parentDoc.querySelector(sel);
+            if (btn) {
+                btn.click();
+                return;
+            }
+        }
+        const sidebar = parentDoc.querySelector('[data-testid="stSidebar"]');
+        if (sidebar) {
+            sidebar.style.position='relative';
+            sidebar.style.left='0';
+            sidebar.style.marginLeft='0';
+            sidebar.style.transform='translateX(0%)';
+            sidebar.style.width='320px';
+            sidebar.style.visibility='visible';
+            sidebar.style.opacity='1';
+            sidebar.style.display='block';
+            sidebar.style.zIndex='1000';
+        }
+    };
+    const button = document.getElementById('restore-sidebar');
+    if (button) {
+        button.onclick = expandSidebar;
+    }
+})();
+</script>
+""", height=140, scrolling=False)
+
 
 # ─────────────────────────────────────────────
 # PAGE: DASHBOARD
@@ -759,47 +836,6 @@ if page == "🏠 Dashboard":
         </div>""", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-
-    # ── Performance Table ──
-    st.markdown('<div class="section-header">📊 Model Performance Summary</div>', unsafe_allow_html=True)
-
-    table_html = """
-    <table class='perf-table'>
-        <thead>
-            <tr>
-                <th>Model</th>
-                <th>Train Accuracy</th>
-                <th>Test Accuracy</th>
-                <th>Variance (Overfit)</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-    """
-    for name, res in results.items():
-        is_best = (name == best_model_name)
-        row_cls = "best-row" if is_best else ""
-        badge   = "🏆 BEST" if is_best else ""
-        var_color = "#ff4d6d" if res["variance"] > 0.1 else "#f5c842" if res["variance"] > 0.05 else "#00d4aa"
-        table_html += f"""
-        <tr class='{row_cls}'>
-            <td>{("⭐ " if is_best else "") + name}</td>
-            <td>{res['train_acc']*100:.2f}%</td>
-            <td>{res['test_acc']*100:.2f}%</td>
-            <td style='color:{var_color};'>{res['variance']*100:.2f}%</td>
-            <td>{badge}</td>
-        </tr>"""
-    table_html += "</tbody></table>"
-    st.markdown(table_html, unsafe_allow_html=True)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # ── Quick Charts ──
-    col_left, col_right = st.columns([1.6, 1])
-    with col_left:
-        st.pyplot(plot_model_comparison(results), use_container_width=True)
-    with col_right:
-        st.pyplot(plot_approval_distribution(df), use_container_width=True)
 
     # ── Dataset Preview ──
     st.markdown('<div class="section-header">🗃️ Dataset Preview</div>', unsafe_allow_html=True)
