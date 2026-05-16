@@ -302,70 +302,111 @@ st.markdown("""
 # ─────────────────────────────────────────────
 @st.cache_data
 def load_and_preprocess():
-    """
-    Load CSV bypassing the header entirely (header=None, skiprows=1),
-    then assign clean column names by position. This is the only approach
-    that survives any whitespace/tab/encoding corruption in the CSV header.
-    """
-    # ── Column names in the exact order they appear in the CSV ──
-    COL_NAMES = [
-        "loan_id", "no_of_dependents", "education", "self_employed",
-        "income_annum", "loan_amount", "loan_term", "cibil_score",
-        "residential_assets_value", "commercial_assets_value",
-        "luxury_assets_value", "bank_asset_value", "loan_status"
-    ]
-
+    """Load CSV, preprocess, engineer features, encode, return clean df + encoders."""
     try:
-        # header=None  → don't treat row 0 as column names
-        # skiprows=1   → skip the actual (potentially corrupt) header row
-        # names=COL_NAMES → assign our clean names directly
-        df = pd.read_csv(
-            "loan_approval_dataset.csv",
-            header=None,
-            skiprows=1,
-            names=COL_NAMES
-        )
+        df = pd.read_csv("loan_approval_dataset.csv")
     except FileNotFoundError:
-        st.error("⚠️ `loan_approval_dataset.csv` not found. Place it in the same directory as `app.py`.")
+        st.error("⚠️ `loan_approval_dataset.csv` not found. Please place it in the same directory as `app.py`.")
         st.stop()
 
-    # ── Strip whitespace from all string columns ──
+    # Strip whitespace and normalize column names to lowercase snake_case
+    df.columns = df.columns.str.strip()
+    df.columns = df.columns.str.lower().str.replace(' ', '_')
     for col in df.select_dtypes(include="object").columns:
-        df[col] = df[col].astype(str).str.strip()
+        df[col] = df[col].str.strip()
 
-    # ── Force numeric types ──
-    numeric_cols = [
-        "no_of_dependents", "income_annum", "loan_amount", "loan_term",
-        "cibil_score", "residential_assets_value", "commercial_assets_value",
-        "luxury_assets_value", "bank_asset_value"
-    ]
-    for col in numeric_cols:
-        df[col] = pd.to_numeric(df[col], errors="coerce")
+    # Map common alternative column names from external datasets to the
+    # canonical names expected by this app.
+    rename_map = {
+        "applicant_id": "loan_id",
+        "annual_income": "income_annum",
+        "credit_score": "cibil_score",
+        "loan_amount": "loan_amount",
+        "loan_status": "loan_status",
+        "education": "education",
+    }
+    df.rename(columns={k: v for k, v in rename_map.items() if k in df.columns}, inplace=True)
 
-    # ── Drop loan_id ──
-    df.drop(columns=["loan_id"], inplace=True, errors="ignore")
+    # Fail fast with a helpful message when absolutely critical columns are missing.
+    required = ["loan_amount", "income_annum"]
+    missing = [c for c in required if c not in df.columns]
+    if missing:
+        st.error(f"⚠️ Missing required columns in CSV: {', '.join(missing)}. Detected columns: {', '.join(df.columns)}")
+        st.stop()
 
-    # ── Drop nulls ──
+    # Provide sensible defaults for optional features expected by the model
+    # so the app can still run on datasets with fewer columns.
+    defaults = {
+        "self_employed": "No",
+        "education": "Not Graduate",
+        "loan_status": "Rejected",
+        "no_of_dependents": 0,
+        "loan_term": 10,
+        "cibil_score": df.get("cibil_score", pd.Series([650]*len(df))),
+        "residential_assets_value": 0,
+        "commercial_assets_value": 0,
+        "luxury_assets_value": 0,
+        "bank_asset_value": 0,
+    }
+
+    for col, val in defaults.items():
+        if col not in df.columns:
+            # If default is a Series (e.g., cibil_score mapping), assign directly
+            df[col] = val if not isinstance(val, pd.Series) else val
+
+    # Ensure numeric defaults have the right dtype
+    num_cols = ["no_of_dependents", "loan_term", "cibil_score",
+                "residential_assets_value", "commercial_assets_value",
+                "luxury_assets_value", "bank_asset_value"]
+    for nc in num_cols:
+        if nc in df.columns:
+            df[nc] = pd.to_numeric(df[nc], errors="coerce").fillna(0)
+
+    # Drop loan_id (non-predictive identifier)
+    if "loan_id" in df.columns:
+        df.drop(columns=["loan_id"], inplace=True)
+
+    # Handle missing values
     df.dropna(inplace=True)
-    df.reset_index(drop=True, inplace=True)
 
-    # ── Feature Engineering: loan burden ratio ──
-    df["loan_income_ratio"] = df["loan_amount"] / df["income_annum"].replace(0, 1)
+    # ── Feature Engineering ──
+    # loan_income_ratio: how many times loan exceeds annual income
+    df["loan_income_ratio"] = df["loan_amount"] / (df["income_annum"] + 1)
 
     # ── Label Encoding ──
-    le_edu    = LabelEncoder()
-    le_self   = LabelEncoder()
-    le_status = LabelEncoder()
+    le_edu      = LabelEncoder()
+    le_self     = LabelEncoder()
+    le_status   = LabelEncoder()
 
-    df["education_enc"]     = le_edu.fit_transform(df["education"])
-    df["self_employed_enc"] = le_self.fit_transform(df["self_employed"])
-    df["loan_status_enc"]   = le_status.fit_transform(df["loan_status"])
+    # Fit encoders on training dataset and record a safe default for unseen labels
+    le_edu.fit(df["education"])
+    edu_default = df["education"].mode().iloc[0] if not df["education"].mode().empty else le_edu.classes_[0]
+    df["education_enc"] = le_edu.transform(df["education"])
+
+    le_self.fit(df["self_employed"])
+    self_default = df["self_employed"].mode().iloc[0] if not df["self_employed"].mode().empty else le_self.classes_[0]
+    df["self_employed_enc"] = le_self.transform(df["self_employed"])
+
+    le_status.fit(df["loan_status"])
+    status_default = df["loan_status"].mode().iloc[0] if not df["loan_status"].mode().empty else le_status.classes_[0]
+    df["loan_status_enc"] = le_status.transform(df["loan_status"])
 
     encoders = {
-        "education":     le_edu,
-        "self_employed": le_self,
-        "loan_status":   le_status,
+        "education": {"encoder": le_edu, "default": edu_default},
+        "self_employed": {"encoder": le_self, "default": self_default},
+        "loan_status": {"encoder": le_status, "default": status_default}
     }
+
+    # Auto-encode any other object/string columns (e.g., marital_status)
+    for col in df.select_dtypes(include="object").columns:
+        if col not in ["education", "self_employed", "loan_status"]:
+            le = LabelEncoder()
+            try:
+                df[col + "_enc"] = le.fit_transform(df[col].astype(str))
+                encoders[col] = {"encoder": le, "default": df[col].mode().iloc[0] if not df[col].mode().empty else str(le.classes_[0])}
+            except Exception:
+                # skip columns that cannot be encoded
+                continue
 
     return df, encoders
 
@@ -373,25 +414,45 @@ def load_and_preprocess():
 @st.cache_resource
 def train_models(df):
     """Train DT, RF, GB models. Return trained models + metrics dict."""
-    feature_cols = [
-        "no_of_dependents", "education_enc", "self_employed_enc",
-        "income_annum", "loan_amount", "loan_term", "cibil_score",
-        "residential_assets_value", "commercial_assets_value",
-        "luxury_assets_value", "bank_asset_value", "loan_income_ratio"
-    ]
+    # Build feature columns dynamically from available numeric and encoded features
+    df = df.copy()
+    # Drop identifier-like columns if any slipped through
+    id_cols = [c for c in df.columns if ("id" in c and not c.endswith("_enc")) or c.endswith("_id")]
+    if id_cols:
+        df.drop(columns=id_cols, inplace=True, errors="ignore")
+
+    num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    # remove target if present
+    if "loan_status_enc" in num_cols:
+        num_cols.remove("loan_status_enc")
+    # include any *_enc columns (categorical encodings)
+    enc_cols = [c for c in df.columns if c.endswith("_enc") and c != "loan_status_enc"]
+    # prefer a stable ordering: numeric cols first then encoded cols
+    feature_cols = [c for c in num_cols if c not in enc_cols] + enc_cols
     target_col = "loan_status_enc"
 
-    X = df[feature_cols]
+    X = df[feature_cols].fillna(0)
     y = df[target_col]
+
+    # Quick importance pass to select top features and reduce overfitting
+    rf_tmp = RandomForestClassifier(n_estimators=120, random_state=42, n_jobs=-1, class_weight="balanced")
+    rf_tmp.fit(X, y)
+    importances = rf_tmp.feature_importances_
+    feat_imp = sorted(zip(feature_cols, importances), key=lambda x: x[1], reverse=True)
+    top_k = min(10, len(feature_cols))
+    selected_features = [f for f, _ in feat_imp[:top_k]]
+
+    # Use selected features for final training (reduces noise and overfitting)
+    X = X[selected_features]
 
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42, stratify=y
     )
 
     models = {
-        "Decision Tree":      DecisionTreeClassifier(random_state=42, max_depth=8),
-        "Random Forest":      RandomForestClassifier(n_estimators=150, random_state=42, n_jobs=-1),
-        "Gradient Boosting":  GradientBoostingClassifier(n_estimators=150, random_state=42, learning_rate=0.1)
+        "Decision Tree":      DecisionTreeClassifier(random_state=42, max_depth=6, class_weight="balanced"),
+        "Random Forest":      RandomForestClassifier(n_estimators=200, random_state=42, max_depth=8, class_weight="balanced", n_jobs=-1),
+        "Gradient Boosting":  GradientBoostingClassifier(n_estimators=200, random_state=42, learning_rate=0.05, max_depth=3)
     }
 
     results = {}
@@ -413,10 +474,25 @@ def train_models(df):
             "y_test":       y_test,
         }
         trained[name] = model
-
     best_model_name = max(results, key=lambda k: results[k]["test_acc"])
 
-    return results, trained, best_model_name, feature_cols, X_train, X_test, y_train, y_test
+    # Return selected feature list instead of all features
+    return results, trained, best_model_name, selected_features, X_train, X_test, y_train, y_test
+
+
+def _safe_label_transform(encoders, key, value):
+    """Transform a single label value using stored encoder dict.
+    If the value wasn't seen during training, map to the encoder's default.
+    """
+    info = encoders.get(key)
+    if info is None:
+        raise KeyError(f"Encoder for '{key}' not found")
+    le = info["encoder"]
+    default = info.get("default", le.classes_[0])
+    if value in le.classes_:
+        return int(le.transform([value])[0])
+    else:
+        return int(le.transform([default])[0])
 
 
 # ─────────────────────────────────────────────
@@ -792,50 +868,57 @@ elif page == "🔮 Predict":
             for e in errors:
                 st.error(f"⚠️ {e}")
         else:
-            edu_enc  = encoders["education"].transform([education])[0]
-            self_enc = encoders["self_employed"].transform([self_employed])[0]
+            edu_enc  = _safe_label_transform(encoders, "education", education)
+            self_enc = _safe_label_transform(encoders, "self_employed", self_employed)
 
-            input_data = np.array([[
-                no_of_dependents, edu_enc, self_enc,
-                income_annum, loan_amount, loan_term, cibil_score,
-                residential_assets_value, commercial_assets_value,
-                luxury_assets_value, bank_asset_value, loan_income_ratio
-            ]])
+            # Build input vector based on trained feature_cols
+            form_map = {
+                "no_of_dependents": no_of_dependents,
+                "education": education,
+                "self_employed": self_employed,
+                "income_annum": income_annum,
+                "loan_amount": loan_amount,
+                "loan_term": loan_term,
+                "cibil_score": cibil_score,
+                "residential_assets_value": residential_assets_value,
+                "commercial_assets_value": commercial_assets_value,
+                "luxury_assets_value": luxury_assets_value,
+                "bank_asset_value": bank_asset_value,
+                "loan_income_ratio": loan_income_ratio
+            }
+
+            input_vals = []
+            for feat in feature_cols:
+                # encoded categorical
+                if feat.endswith("_enc"):
+                    orig = feat[:-4]
+                    if orig in form_map:
+                        v = _safe_label_transform(encoders, orig, form_map[orig])
+                    else:
+                        info = encoders.get(orig)
+                        if info:
+                            v = int(info["encoder"].transform([info["default"]])[0])
+                        else:
+                            v = 0
+                    input_vals.append(v)
+                else:
+                    if feat in form_map:
+                        input_vals.append(float(form_map[feat]))
+                    else:
+                        # fallback to dataset median when feature isn't part of the form
+                        if feat in df.columns:
+                            input_vals.append(float(df[feat].median()))
+                        else:
+                            input_vals.append(0.0)
+
+            input_data = np.array([input_vals])
 
             prediction  = best_model.predict(input_data)[0]
             proba       = best_model.predict_proba(input_data)[0]
-            pred_label  = encoders["loan_status"].inverse_transform([prediction])[0]
+            pred_label  = encoders["loan_status"]["encoder"].inverse_transform([prediction])[0]
             confidence  = max(proba) * 100
             is_approved = pred_label.strip() == "Approved"
 
-            # ── Result Header ──
-            if is_approved:
-                st.markdown(f"""
-                <div class='result-approved'>
-                    <div class='result-title'>✅ LOAN APPROVED</div>
-                    <div style='color:#7a8ba0; font-size:0.85rem; margin-top:0.5rem;'>
-                        Model: <strong style='color:#e8edf5;'>{best_model_name}</strong>
-                        &nbsp;·&nbsp; Accuracy: <strong style='color:#e8edf5;'>{best_test_acc*100:.2f}%</strong>
-                    </div>
-                </div>""", unsafe_allow_html=True)
-            else:
-                st.markdown(f"""
-                <div class='result-rejected'>
-                    <div class='result-title'>❌ LOAN REJECTED</div>
-                    <div style='color:#7a8ba0; font-size:0.85rem; margin-top:0.5rem;'>
-                        Model: <strong style='color:#e8edf5;'>{best_model_name}</strong>
-                        &nbsp;·&nbsp; Accuracy: <strong style='color:#e8edf5;'>{best_test_acc*100:.2f}%</strong>
-                    </div>
-                </div>""", unsafe_allow_html=True)
-
-            # ── Confidence ──
-            st.markdown(f"""
-            <div style='margin:1rem 0 0.3rem 0; font-size:0.8rem; color:#7a8ba0;'>
-                Prediction Confidence: <strong style='color:#e8edf5;'>{confidence:.1f}%</strong>
-            </div>
-            <div class='conf-track'>
-                <div class='{"conf-fill-good" if is_approved else "conf-fill-bad"}' style='width:{confidence}%;'></div>
-            </div>""", unsafe_allow_html=True)
 
             # ── Intelligent Reasoning ──
             st.markdown('<div class="section-header">🧠 AI Reasoning & Analysis</div>', unsafe_allow_html=True)
@@ -854,6 +937,10 @@ elif page == "🔮 Predict":
             for r in reasons_bad:
                 st.markdown(f"<div class='reason-box reason-bad'>{r}</div>", unsafe_allow_html=True)
 
+            # Apply conservative override: if many strong negative reasons, force manual review/reject
+            if len(reasons_bad) >= 3:
+                is_approved = False
+
             # ── Summary Stats ──
             st.markdown('<div class="section-header">📈 Applicant Financial Snapshot</div>', unsafe_allow_html=True)
             s1, s2, s3, s4 = st.columns(4)
@@ -869,6 +956,38 @@ elif page == "🔮 Predict":
                     <div class='metric-label'>{label}</div>
                     <div class='metric-value' style='color:{color}; font-size:1.4rem;'>{val}</div>
                 </div>""", unsafe_allow_html=True)
+
+            # Final result header (after reasoning & overrides)
+            final_label = 'Approved' if is_approved else 'Rejected'
+            if is_approved:
+                st.markdown(f"""
+                <div class='result-approved'>
+                    <div class='result-title'>✅ LOAN APPROVED</div>
+                    <div style='color:#7a8ba0; font-size:0.85rem; margin-top:0.5rem;'>
+                        Model: <strong style='color:#e8edf5;'>{best_model_name}</strong>
+                        &nbsp;·&nbsp; Accuracy: <strong style='color:#e8edf5;'>{best_test_acc*100:.2f}%</strong>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.markdown(f"""
+                <div class='result-rejected'>
+                    <div class='result-title'>❌ LOAN REJECTED</div>
+                    <div style='color:#7a8ba0; font-size:0.85rem; margin-top:0.5rem;'>
+                        Model: <strong style='color:#e8edf5;'>{best_model_name}</strong>
+                        &nbsp;·&nbsp; Accuracy: <strong style='color:#e8edf5;'>{best_test_acc*100:.2f}%</strong>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+            # ── Confidence ──
+            st.markdown(f"""
+            <div style='margin:1rem 0 0.3rem 0; font-size:0.8rem; color:#7a8ba0;'>
+                Prediction Confidence: <strong style='color:#e8edf5;'>{confidence:.1f}%</strong>
+            </div>
+            <div class='conf-track'>
+                <div class='{"conf-fill-good" if is_approved else "conf-fill-bad"}' style='width:{confidence}%;'></div>
+            </div>""", unsafe_allow_html=True)
 
 
 # ─────────────────────────────────────────────
