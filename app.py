@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import seaborn as sns
 import warnings
+from pathlib import Path
 warnings.filterwarnings("ignore")
 
 from sklearn.tree import DecisionTreeClassifier
@@ -315,11 +316,15 @@ st.markdown("""
 @st.cache_data
 def load_and_preprocess():
     """Load CSV, preprocess, engineer features, encode, return clean df + encoders."""
+    dataset_path = Path(__file__).resolve().parent / "loan_approval_dataset.csv"
     try:
-        df = pd.read_csv("loan_approval_dataset.csv")
+        raw_df = pd.read_csv(dataset_path)
     except FileNotFoundError:
-        st.error("⚠️ `loan_approval_dataset.csv` not found. Please place it in the same directory as `app.py`.")
+        st.error(f"⚠️ `{dataset_path.name}` not found. Please place it in the same directory as `app.py`.")
         st.stop()
+
+    raw_count = len(raw_df)
+    df = raw_df.copy()
 
     # Strip whitespace and normalize column names to lowercase snake_case
     df.columns = df.columns.str.strip()
@@ -420,7 +425,8 @@ def load_and_preprocess():
                 # skip columns that cannot be encoded
                 continue
 
-    return df, encoders
+    clean_count = len(df)
+    return df, encoders, raw_count, clean_count
 
 
 @st.cache_resource
@@ -669,7 +675,7 @@ def plot_correlation_heatmap(df):
 # LOAD DATA + TRAIN
 # ─────────────────────────────────────────────
 with st.spinner("🔄 Loading dataset and training models..."):
-    df, encoders = load_and_preprocess()
+    df, encoders, raw_count, clean_count = load_and_preprocess()
     results, trained_models, best_model_name, feature_cols, X_train, X_test, y_train, y_test = train_models(df)
 
 best_model    = results[best_model_name]["model"]
@@ -721,8 +727,9 @@ with st.sidebar:
         • Decision Tree<br>
         • Random Forest<br>
         • Gradient Boosting<br><br>
-        <b style='color:#e8edf5;'>Features:</b> 12 engineered<br>
-        <b style='color:#e8edf5;'>Dataset:</b> loan_approval_dataset.csv
+        <b style='color:#e8edf5;'>Dataset:</b> loan_approval_dataset.csv<br>
+        <b style='color:#e8edf5;'>Rows loaded:</b> {raw_count:,}<br>
+        <b style='color:#e8edf5;'>Rows after clean:</b> {clean_count:,}
     </div>
     """, unsafe_allow_html=True)
 
